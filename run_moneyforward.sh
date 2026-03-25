@@ -9,6 +9,6 @@ echo "$(date): 実行開始" >> "$LOG_FILE"
 
 # Pythonスクリプトの実行
 # Playwrightなどのライブラリがインストールされている環境のPythonパスを指定
-/usr/bin/python3 "/Users/takeko-macmini/Desktop/実験室/moneyforward_automation.py" >> "$LOG_FILE" 2>&1
+"/Users/takeko-macmini/Desktop/実験室/.venv/bin/python3" "/Users/takeko-macmini/Desktop/実験室/moneyforward_automation.py" >> "$LOG_FILE" 2>&1
 
 echo "$(date): 実行完了" >> "$LOG_FILE"
