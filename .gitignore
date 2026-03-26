@@ -2,4 +2,10 @@
 __pycache__/
 *.log
 assets_data.txt
+saxo_assets.txt
 .DS_Store
+.env
+saxo_tokens.json
+google_credentials.json
+mf_dom.html
+test_*.py

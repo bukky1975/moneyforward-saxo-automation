@@ -5,10 +5,15 @@ import shutil
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
+from dotenv import load_dotenv
+
+# .env を読み込み
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+
 # --- 設定項目 ---
-# 以下の情報は環境変数または直接入力してください
-EMAIL = "bukky1975@gmail.com"
-PASSWORD = "gUnmaz-horsot-vanze3"
+# 環境変数 (.env) から読み込みます
+EMAIL = os.environ.get("MF_EMAIL", "")
+PASSWORD = os.environ.get("MF_PASSWORD", "")
 
 # Googleドライブの保存先パス
 DRIVE_PATH = "/Users/takeko-macmini/Library/CloudStorage/GoogleDrive-bukky1975@gmail.com/マイドライブ/毎日更新"
@@ -33,6 +38,34 @@ def scrape_moneyforward():
         # ログイン成功待ち（ダッシュボードまたはスマート認証待ち）
         page.wait_for_url("https://ssnb.x.moneyforward.com/", timeout=60000)
         print("ログイン成功。")
+
+        # 0. サクソバンク証券の手動口座更新
+        print("Saxo資産総額の自動同期を開始...")
+        try:
+            import re
+            saxo_file = "/Users/takeko-macmini/Desktop/実験室/saxo_assets.txt"
+            saxo_total = None
+            if os.path.exists(saxo_file):
+                with open(saxo_file, "r", encoding="utf-8") as f:
+                    match = re.search(r"ポートフォリオ(?:総資産額|総計):\s*([\d,]+(?:\.\d+)?)\s*JPY", f.read())
+                    if match:
+                        saxo_total = int(float(match.group(1).replace(",", "")))
+            
+            if saxo_total is not None:
+                page.goto("https://ssnb.x.moneyforward.com/accounts")
+                page.locator("text=サクソバンク証券").first.click()
+                page.wait_for_load_state("networkidle")
+                row = page.locator("tr", has_text="オプション等資産")
+                row.locator('img[alt="変更"]').first.click()
+                page.wait_for_selector('input[name="user_asset_det[value]"]:visible', timeout=10000)
+                page.locator('input[name="user_asset_det[value]"]:visible').fill(str(saxo_total))
+                page.locator('input[value="この内容で登録する"]:visible').click()
+                page.wait_for_load_state("networkidle")
+                print(f"サクソバンク証券の残高を {saxo_total} 円に同期しました！")
+            else:
+                print("⚠️ saxo_assets.txt から総資産額を読み込めませんでした。")
+        except Exception as e:
+            print(f"⚠️ サクソバンク証券の同期中にエラーが発生しました: {e}")
 
         # 1. 各金融機関の更新
         print("金融機関の更新を開始...")

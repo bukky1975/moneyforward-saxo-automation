@@ -1,64 +1,333 @@
 import os
-import time
-import pyotp
-from playwright.sync_api import sync_playwright
+import sys
+import json
+import urllib.parse
+import webbrowser
+import requests
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from dotenv import load_dotenv
+from datetime import datetime
 
-# --- 設定項目 (環境変数からの読み込みを推奨) ---
-USER_ID = os.environ.get("SAXO_USER_ID", "YOUR_USER_ID")
-PASSWORD = os.environ.get("SAXO_PASSWORD", "YOUR_PASSWORD")
-TOTP_SECRET = os.environ.get("SAXO_TOTP_SECRET", "YOUR_TOTP_SECRET")
+# Load .env
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
-def generate_totp(secret):
-    if not secret or secret == "YOUR_TOTP_SECRET":
-        return None
-    totp = pyotp.TOTP(secret.replace(" ", ""))
-    return totp.now()
+APP_KEY = os.environ.get("SAXO_APP_KEY")
+APP_SECRET = os.environ.get("SAXO_APP_SECRET")
+REDIRECT_URI = os.environ.get("SAXO_REDIRECT_URI", "http://localhost:12321/redirect")
 
-def automate_saxo():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False) # 動作確認のため一旦有頭ブラウザ
-        context = browser.new_context()
-        page = context.new_page()
+TOKEN_FILE = os.path.join(os.path.dirname(__file__), "saxo_tokens.json")
+OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "saxo_assets.txt")
+GOOGLE_CREDS_FILE = os.path.join(os.path.dirname(__file__), "google_credentials.json")
+SPREADSHEET_ID = "1YmXHlf-f-RHKIpX42ih0MZaghF3DpwdIo5JhS5l9fV8"
 
-        print("SaxoTraderにログイン中...")
-        page.goto("https://www.saxotrader.com/login/ja")
+AUTH_URL = "https://live.logonvalidation.net/authorize"
+TOKEN_URL = "https://live.logonvalidation.net/token"
+OPENAPI_BASE_URL = "https://gateway.saxobank.com/openapi"
 
-        # 1. ユーザーIDの入力
-        # セレクタは調査結果に基づき、クラス名の一部を使用
-        page.fill('input[class*="input-base"]', USER_ID)
-        page.click('button:has-text("続行")')
+auth_code = None
+
+class OAuthCallbackHandler(BaseHTTPRequestHandler):
+    def log_message(self, format, *args):
+        pass # Suppress logging
+    
+    def do_GET(self):
+        global auth_code
+        parsed_path = urllib.parse.urlparse(self.path)
+        query = urllib.parse.parse_qs(parsed_path.query)
         
-        # 2. パスワードの入力 (画面遷移待ち)
-        page.wait_for_selector('input[type="password"]')
-        page.fill('input[type="password"]', PASSWORD)
-        page.click('button:has-text("続行")')
-
-        # 3. 2段階認証 (TOTP)
-        otp_code = generate_totp(TOTP_SECRET)
-        if otp_code:
-            print(f"2段階認証コードを生成しました: {otp_code}")
-            # 指定された入力欄を待機（セレクタは調整が必要な可能性あり）
-            page.wait_for_selector('input[class*="input-base"]')
-            page.fill('input[class*="input-base"]', otp_code)
-            page.click('button:has-text("続行")')
+        if "code" in query:
+            auth_code = query["code"][0]
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html; charset=utf-8')
+            self.end_headers()
+            html = "<html><body><h1>認証成功！</h1><p>このウィンドウを閉じてターミナルに戻ってください。スクリプトがデータの取得を継続します。</p></body></html>"
+            self.wfile.write(html.encode('utf-8'))
         else:
-            print("TOTP_SECRETが設定されていないため、2段階認証は手動入力を待機します。")
-            # ログイン完了後のURL（例: ダッシュボード）への遷移を待つ
-            time.sleep(30) 
+            self.send_response(400)
+            self.end_headers()
+            self.wfile.write(b"Authorization failed.")
 
-        # ログイン成功待ち
-        print("ログイン完了。ダッシュボードへ遷移中...")
-        # URLが変わるのを待つ
-        page.wait_for_load_state("networkidle")
+def get_auth_code():
+    url = f"{AUTH_URL}?response_type=code&client_id={APP_KEY}&redirect_uri={urllib.parse.quote(REDIRECT_URI)}&state=123"
+    print(f"ブラウザを開いてSaxo APIの初回認証を行います...\nもし自動で開かない場合は以下のURLにアクセスしてログイン/承認してください:\n{url}")
+    webbrowser.open(url)
+    
+    port = int(urllib.parse.urlparse(REDIRECT_URI).port or 12321)
+    
+    class ReusableTCPServer(HTTPServer):
+        allow_reuse_address = True
+        
+    server = ReusableTCPServer(('localhost', port), OAuthCallbackHandler)
+    server.handle_request()
+    server.server_close()
+    return auth_code
 
-        # 4. レポートの抽出 (ターゲットが決定次第実装)
-        print("現在はログイン確認までを実装しています。")
-        # 例: 資産管理 > 各種レポート へのナビゲーション
-        # page.goto("https://www.saxotrader.com/...)
+def get_tokens(code=None, refresh_token=None):
+    data = {
+        "client_id": APP_KEY,
+        "client_secret": APP_SECRET,
+    }
+    if code:
+        data["grant_type"] = "authorization_code"
+        data["code"] = code
+        data["redirect_uri"] = REDIRECT_URI
+    elif refresh_token:
+        data["grant_type"] = "refresh_token"
+        data["refresh_token"] = refresh_token
 
-        print("処理を終了します。")
-        time.sleep(5)
-        browser.close()
+    response = requests.post(TOKEN_URL, data=data)
+    response.raise_for_status()
+    tokens = response.json()
+    
+    with open(TOKEN_FILE, "w") as f:
+        json.dump(tokens, f)
+    return tokens
+
+def load_tokens():
+    if os.path.exists(TOKEN_FILE):
+        with open(TOKEN_FILE, "r") as f:
+            return json.load(f)
+    return None
+
+def normalize_name(name):
+    """すべてのスペースを削除し大文字化（比較用マッチャー）"""
+    return name.replace(" ", "").upper() if name else ""
+
+def generate_target_sheet_name(pos):
+    """建玉データ（JSON）から推測される正規化用のシート名を生成"""
+    display_fmt = pos.get("DisplayAndFormat", {})
+    symbol = display_fmt.get("Symbol", "")
+    ticker = symbol.split('/')[0] if '/' in symbol else ""
+    
+    opt_data = pos.get("PositionBase", {}).get("OptionsData", {})
+    expiry_raw = opt_data.get("ExpiryDate", "")
+    if expiry_raw:
+        dt = datetime.strptime(expiry_raw.split("T")[0], "%Y-%m-%d")
+        expiry_str = dt.strftime("%b%Y") # 例: Jun2027
+    else:
+        expiry_str = ""
+        
+    strike = opt_data.get("Strike", "")
+    if isinstance(strike, float) and strike.is_integer():
+        strike_str = str(int(strike))
+    else:
+        strike_str = str(strike)
+        
+    put_call = opt_data.get("PutCall", "")
+    pc_str = put_call[0].upper() if put_call else ""
+    
+    # 完全に空白を抜いた形式（例: "XSPJun2027590C"）
+    target = f"{ticker}{expiry_str}{strike_str}{pc_str}"
+    return target
+
+def update_google_sheets(positions):
+    """Saxo建玉データをGoogleスプレッドシートの個別シートへ更新"""
+    if not os.path.exists(GOOGLE_CREDS_FILE):
+        print(f"\n[スプレッドシート連携スキップ] Google APIキー ({GOOGLE_CREDS_FILE}) が見つかりませんでした。書き込みを行うためにはキーJSONファイルを配置してください。")
+        return
+        
+    print("\nGoogleスプレッドシートへデータを更新しています...")
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_CREDS_FILE, scope)
+    client = gspread.authorize(creds)
+    
+    try:
+        spreadsheet = client.open_by_key(SPREADSHEET_ID)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        print(f"スプレッドシートへのアクセスに失敗しました: {repr(e)}")
+        return
+        
+    worksheets = spreadsheet.worksheets()
+    # シートタイトルを正規化してDictにマップ
+    sheet_map = {normalize_name(ws.title): ws for ws in worksheets}
+    
+    today_str = datetime.now().strftime("%Y/%m/%d")
+    
+    for pos in positions:
+        asset_type = pos.get("PositionBase", {}).get("AssetType", "")
+        if "Option" not in asset_type:
+            continue
+            
+        target_name = normalize_name(generate_target_sheet_name(pos))
+        
+        if target_name in sheet_map:
+            ws = sheet_map[target_name]
+            
+            amount = pos.get("PositionBase", {}).get("Amount", 0)
+            purchase_price = pos.get("PositionBase", {}).get("OpenPrice", 0)
+            current_price = pos.get("PositionView", {}).get("CurrentPrice", 0)
+            pl = pos.get("PositionView", {}).get("ProfitLossOnTrade", 0)
+            
+            # カスタム保存したグリークス情報（fetchルーチンで注入済み）
+            custom = pos.get("CustomGreeks", {})
+            delta = custom.get("Delta", "")
+            gamma = custom.get("Gamma", "")
+            vega = custom.get("Vega", "")
+            theta = custom.get("Theta", "")
+            iv = custom.get("IV", "")
+            
+            # シートの列(A〜J)に対応
+            # A:日付, B:数量, C:購入価格, D:価格, E:損益, F:IV, G:デルタ, H:ガンマ, I:ベガ, J:セータ
+            row_data = [
+                today_str, amount, purchase_price, current_price, pl, 
+                iv, delta, gamma, vega, theta
+            ]
+            
+            ws.append_row(row_data)
+            print(f"- シート '{ws.title}' に本日のデータを追記(追加)しました！")
+        else:
+            print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})")
+
+def fetch_and_save_portfolio(access_token):
+    headers = {"Authorization": f"Bearer {access_token}"}
+    
+    client_resp = requests.get(f"{OPENAPI_BASE_URL}/port/v1/clients/me", headers=headers)
+    client_resp.raise_for_status()
+    client_key = client_resp.json()["ClientKey"]
+    
+    balance_resp = requests.get(f"{OPENAPI_BASE_URL}/port/v1/balances/?ClientKey={client_key}", headers=headers)
+    balance_resp.raise_for_status()
+    bal_data = balance_resp.json()
+    
+    pos_url = f"{OPENAPI_BASE_URL}/port/v1/positions/me/?ClientKey={client_key}&FieldGroups=PositionBase,PositionView,DisplayAndFormat,Greeks"
+    pos_resp = requests.get(pos_url, headers=headers)
+    pos_resp.raise_for_status()
+    positions_raw = pos_resp.json().get("Data", [])
+    
+    # 建玉の集約（同一UICをまとめる）
+    aggregated = {}
+    for pos in positions_raw:
+        uic = pos.get("PositionBase", {}).get("Uic")
+        if not uic:
+            continue
+        
+        if uic not in aggregated:
+            aggregated[uic] = pos
+        else:
+            base = aggregated[uic]
+            base_amt = base["PositionBase"]["Amount"]
+            new_amt = pos["PositionBase"]["Amount"]
+            base_price = base["PositionBase"]["OpenPrice"]
+            new_price = pos["PositionBase"]["OpenPrice"]
+            
+            total_amt = base_amt + new_amt
+            if total_amt != 0:
+                # 加重平均の計算: (価格1 * 数量1 + 価格2 * 数量2) / 合計数量
+                weighted_price = (base_price * base_amt + new_price * new_amt) / total_amt
+                base["PositionBase"]["OpenPrice"] = weighted_price
+            
+            base["PositionBase"]["Amount"] = total_amt
+            # 評価損益も合算
+            base["PositionView"]["ProfitLossOnTrade"] = base["PositionView"].get("ProfitLossOnTrade", 0) + pos["PositionView"].get("ProfitLossOnTrade", 0)
+            
+    positions = list(aggregated.values())
+
+    output_lines = [
+        f"--- Saxo Bank 資産レポート ---",
+        f"取得日時: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        ""
+    ]
+    
+    output_lines.append("[口座残高]")
+    currency = bal_data.get("Currency", "JPY")
+    total_value = bal_data.get("TotalValue", 0)
+    cash_balance = bal_data.get("CashBalance", 0)
+    output_lines.append(f"  ポートフォリオ総計: {total_value:,.2f} {currency}")
+    output_lines.append(f"  現金残高: {cash_balance:,.2f} {currency}")
+    
+    output_lines.append("\n[保有建玉]")
+    if not positions:
+        output_lines.append("  現在保有している建玉はありません。")
+        
+    for pos in positions:
+        asset_type = pos.get("PositionBase", {}).get("AssetType", "")
+        amount = pos.get("PositionBase", {}).get("Amount", 0)
+        open_price = pos.get("PositionBase", {}).get("OpenPrice", 0)
+        current_price = pos.get("PositionView", {}).get("CurrentPrice", 0)
+        profit_loss = pos.get("PositionView", {}).get("ProfitLossOnTrade", 0)
+        
+        display_fmt = pos.get("DisplayAndFormat", {})
+        display_name = display_fmt.get("Description", "Unknown")
+        symbol = display_fmt.get("Symbol", "N/A")
+        
+        output_lines.append(f"- {display_name} ({asset_type})")
+        output_lines.append(f"  シンボル: {symbol}")
+        
+        if "Option" in asset_type:
+            opt_data = pos.get("PositionBase", {}).get("OptionsData", {})
+            expiry_raw = opt_data.get("ExpiryDate", "")
+            expiry = expiry_raw.split("T")[0] if expiry_raw else "N/A"
+            strike = opt_data.get("Strike", "N/A")
+            put_call = opt_data.get("PutCall", "N/A")
+            
+            output_lines.append(f"  期日: {expiry}, 権利行使価格: {strike}, {put_call}")
+            
+            # グリークス取得と保存
+            greeks = pos.get("Greeks", {})
+            pos["CustomGreeks"] = {
+                "Delta": "", "Gamma": "", "Theta": "", "Vega": "", "IV": ""
+            }
+            if greeks:
+                delta = greeks.get("InstrumentDelta", "")
+                gamma = greeks.get("InstrumentGamma", "")
+                theta = greeks.get("InstrumentTheta", "")
+                vega  = greeks.get("InstrumentVega", "")
+                implied_vol = greeks.get("MidVol", "")
+                
+                pos["CustomGreeks"] = {
+                    "Delta": delta, "Gamma": gamma, "Theta": theta, "Vega": vega, "IV": implied_vol
+                }
+                
+                output_lines.append(f"  グリークス: Delta={delta}, Gamma={gamma}, Theta={theta}, Vega={vega}")
+            else:
+                output_lines.append(f"  グリークス: N/A (市場データ購読なし等により取得不可)")
+        
+        output_lines.append(f"  数量: {amount}")
+        output_lines.append(f"  取得単価: {open_price}")
+        output_lines.append(f"  現在価格: {current_price}")
+        output_lines.append(f"  評価損益: {profit_loss:,.2f}")
+    
+    output_text = "\n".join(output_lines)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        f.write(output_text)
+    
+    print(output_text)
+    print(f"\nデータを {OUTPUT_FILE} に保存しました。")
+    
+    # 最後にローカルに保存した建玉情報を使ってGoogle Sheetsを更新
+    update_google_sheets(positions)
+
+def main():
+    if not APP_KEY or not APP_SECRET:
+        print("エラー: .env に SAXO_APP_KEY と SAXO_APP_SECRET が正しく設定されていません。")
+        sys.exit(1)
+
+    tokens = load_tokens()
+    
+    try:
+        if tokens and "refresh_token" in tokens:
+            print("既存のトークンを使って認証を更新中...")
+            tokens = get_tokens(refresh_token=tokens["refresh_token"])
+        else:
+            print("初回認証が必要です...")
+            code = get_auth_code()
+            if code:
+                tokens = get_tokens(code=code)
+    except Exception as e:
+        print(f"トークンの更新に失敗しました。再認証を行います。 ({e})")
+        code = get_auth_code()
+        if code:
+            tokens = get_tokens(code=code)
+            
+    if tokens and "access_token" in tokens:
+        print("APIからポートフォリオデータを取得中...")
+        fetch_and_save_portfolio(tokens["access_token"])
+    else:
+        print("有効なアクセストークンが取得できませんでした。")
 
 if __name__ == "__main__":
-    automate_saxo()
+    main()
