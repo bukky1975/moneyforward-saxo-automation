@@ -9,3 +9,4 @@ saxo_tokens.json
 google_credentials.json
 mf_dom.html
 test_*.py
+.playwright_data/

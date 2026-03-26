@@ -145,7 +145,10 @@ def update_google_sheets(positions):
     # シートタイトルを正規化してDictにマップ
     sheet_map = {normalize_name(ws.title): ws for ws in worksheets}
     
-    today_str = datetime.now().strftime("%Y/%m/%d")
+    from datetime import timedelta
+    # 米国の日付に合わせるため、前日の日付を取得
+    today_dt = datetime.now() - timedelta(days=1)
+    today_str = today_dt.strftime("%Y/%m/%d")
     
     for pos in positions:
         asset_type = pos.get("PositionBase", {}).get("AssetType", "")
@@ -162,7 +165,7 @@ def update_google_sheets(positions):
             current_price = pos.get("PositionView", {}).get("CurrentPrice", 0)
             pl = pos.get("PositionView", {}).get("ProfitLossOnTrade", 0)
             
-            # カスタム保存したグリークス情報（fetchルーチンで注入済み）
+            # カスタム保存したグリークス情報
             custom = pos.get("CustomGreeks", {})
             delta = custom.get("Delta", "")
             gamma = custom.get("Gamma", "")
@@ -170,17 +173,28 @@ def update_google_sheets(positions):
             theta = custom.get("Theta", "")
             iv = custom.get("IV", "")
             
-            # シートの列(A〜J)に対応
-            # A:日付, B:数量, C:購入価格, D:価格, E:損益, F:IV, G:デルタ, H:ガンマ, I:ベガ, J:セータ
+            # A:日付, B:数量, C:購入価格, D:現在値, E:評価損益, F:IV, G:Delta, H:Gamma, I:Vega, J:Theta
             row_data = [
                 today_str, amount, purchase_price, current_price, pl, 
                 iv, delta, gamma, vega, theta
             ]
             
-            ws.append_row(row_data)
-            print(f"- シート '{ws.title}' に本日のデータを追記(追加)しました！")
+            # 列Aの最初の空行を探す (先頭からスキャンして、空行または今日の日付の行を特定)
+            col_a = ws.col_values(1)
+            row_index = 4 # データは通常4行目から開始
+            for i, val in enumerate(col_a):
+                if i < 3: continue # 1-3行目はスキップ
+                if not val.strip() or val == today_str:
+                    row_index = i + 1
+                    break
+            else:
+                row_index = len(col_a) + 1
+            
+            cell_range = f"A{row_index}:J{row_index}"
+            ws.update(range_name=cell_range, values=[row_data])
+            print(f"- シート '{ws.title}' に本日のデータを記録しました！ (行: {row_index})", flush=True)
         else:
-            print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})")
+            print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})", flush=True)
 
 def fetch_and_save_portfolio(access_token):
     headers = {"Authorization": f"Bearer {access_token}"}
