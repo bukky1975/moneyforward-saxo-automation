@@ -43,7 +43,7 @@ def scrape_moneyforward():
         print("Saxo資産総額の自動同期を開始...")
         try:
             import re
-            saxo_file = "/Users/takeko-macmini/Desktop/実験室/saxo_assets.txt"
+            saxo_file = os.path.join(os.path.dirname(__file__), "saxo_assets.txt")
             saxo_total = None
             if os.path.exists(saxo_file):
                 with open(saxo_file, "r", encoding="utf-8") as f:
