@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import shutil
 import urllib.parse
 import webbrowser
 import requests
@@ -20,6 +21,7 @@ REDIRECT_URI = os.environ.get("SAXO_REDIRECT_URI", "http://localhost:12321/redir
 TOKEN_FILE = os.path.join(os.path.dirname(__file__), "saxo_tokens.json")
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "saxo_assets.txt")
 GOOGLE_CREDS_FILE = os.path.join(os.path.dirname(__file__), "google_credentials.json")
+DRIVE_PATH = "/Users/takeko-macmini/Library/CloudStorage/GoogleDrive-bukky1975@gmail.com/マイドライブ/毎日更新"
 SPREADSHEET_ID = "1YmXHlf-f-RHKIpX42ih0MZaghF3DpwdIo5JhS5l9fV8"
 
 AUTH_URL = "https://live.logonvalidation.net/authorize"
@@ -196,6 +198,15 @@ def update_google_sheets(positions):
         else:
             print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})", flush=True)
 
+def copy_to_drive():
+    """レポートファイルをGoogleドライブの同期フォルダへコピー"""
+    if os.path.exists(DRIVE_PATH):
+        target = os.path.join(DRIVE_PATH, os.path.basename(OUTPUT_FILE))
+        shutil.copy2(OUTPUT_FILE, target)
+        print(f"Googleドライブ ({target}) にコピーしました。", flush=True)
+    else:
+        print(f"警告: Googleドライブのパスが見つかりません。コピーをスキップします: {DRIVE_PATH}", flush=True)
+
 def fetch_and_save_portfolio(access_token):
     headers = {"Authorization": f"Bearer {access_token}"}
     
@@ -314,6 +325,9 @@ def fetch_and_save_portfolio(access_token):
     
     # 最後にローカルに保存した建玉情報を使ってGoogle Sheetsを更新
     update_google_sheets(positions)
+    
+    # Googleドライブ同期
+    copy_to_drive()
 
 def main():
     if not APP_KEY or not APP_SECRET:

@@ -185,9 +185,17 @@ def scrape_moneyforward():
 
 def copy_to_drive():
     if os.path.exists(DRIVE_PATH):
-        target = os.path.join(DRIVE_PATH, OUTPUT_FILENAME)
-        shutil.copy2(LOCAL_PATH, target)
-        print(f"Googleドライブ ({target}) にコピーしました。", flush=True)
+        # マネフォ資産データのコピー
+        target_mf = os.path.join(DRIVE_PATH, OUTPUT_FILENAME)
+        shutil.copy2(LOCAL_PATH, target_mf)
+        print(f"Googleドライブ ({target_mf}) にコピーしました。", flush=True)
+
+        # Saxo資産データのコピー (存在する場合のみ)
+        saxo_local = os.path.join(os.path.dirname(__file__), "saxo_assets.txt")
+        if os.path.exists(saxo_local):
+            target_saxo = os.path.join(DRIVE_PATH, "saxo_assets.txt")
+            shutil.copy2(saxo_local, target_saxo)
+            print(f"Googleドライブ ({target_saxo}) にコピーしました。", flush=True)
     else:
         print(f"エラー: Googleドライブのパスが見つかりません: {DRIVE_PATH}", flush=True)
 
