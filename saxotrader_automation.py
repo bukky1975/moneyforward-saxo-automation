@@ -53,17 +53,69 @@ class OAuthCallbackHandler(BaseHTTPRequestHandler):
 
 def get_auth_code():
     url = f"{AUTH_URL}?response_type=code&client_id={APP_KEY}&redirect_uri={urllib.parse.quote(REDIRECT_URI)}&state=123"
-    print(f"ブラウザを開いてSaxo APIの初回認証を行います...\nもし自動で開かない場合は以下のURLにアクセスしてログイン/承認してください:\n{url}")
-    webbrowser.open(url)
+    
+    global auth_code
+    auth_code = None
+
+    print("\nPlaywrightを使用してSaxoの自動認証（セッション再利用）を試みます...", flush=True)
+    try:
+        from playwright.sync_api import sync_playwright
+        import time
+        USER_DATA_DIR = os.path.join(os.path.dirname(__file__), ".playwright_data")
+        if os.path.exists(USER_DATA_DIR):
+            with sync_playwright() as p:
+                context = p.chromium.launch_persistent_context(USER_DATA_DIR, headless=True)
+                page = context.new_page()
+                
+                def handle_route(route, request):
+                    global auth_code
+                    if request.url.startswith("http://localhost:12321"):
+                        parsed = urllib.parse.urlparse(request.url)
+                        query = urllib.parse.parse_qs(parsed.query)
+                        if "code" in query:
+                            auth_code = query["code"][0]
+                        route.abort()
+                    else:
+                        route.continue_()
+
+                context.route("**/*", handle_route)
+                
+                try:
+                    page.goto(url, wait_until="load", timeout=20000)
+                    time.sleep(3)
+                except Exception:
+                    pass
+                finally:
+                    context.close()
+    except Exception as e:
+        print(f"Playwright自動認証中にテストエラー: {e}", flush=True)
+
+    if auth_code:
+        print("Playwrightでの自動認証に成功しました！", flush=True)
+        return auth_code
+        
+    print("\nPlaywrightでの自動認証に失敗/タイムアウトしました。手動での承認が必要です。", flush=True)
+    print(f"手動認証UIを起動します...\nURL: {url}", flush=True)
     
     port = int(urllib.parse.urlparse(REDIRECT_URI).port or 12321)
     
     class ReusableTCPServer(HTTPServer):
         allow_reuse_address = True
+        timeout = 180 # 3分でタイムアウト（cronでの無限ハング防止用）
         
     server = ReusableTCPServer(('localhost', port), OAuthCallbackHandler)
+    
+    try:
+        webbrowser.open(url)
+    except Exception as e:
+        print(f"ブラウザ起動エラー: {e}", flush=True)
+        
+    print("手動での認証完了を待機しています（最大180秒）...", flush=True)
     server.handle_request()
     server.server_close()
+    
+    if not auth_code:
+        print("認証が完了しませんでした（タイムアウト）。", flush=True)
     return auth_code
 
 def get_tokens(code=None, refresh_token=None):
@@ -339,31 +391,31 @@ def fetch_and_save_portfolio(access_token):
 
 def main():
     if not APP_KEY or not APP_SECRET:
-        print("エラー: .env に SAXO_APP_KEY と SAXO_APP_SECRET が正しく設定されていません。")
+        print("エラー: .env に SAXO_APP_KEY と SAXO_APP_SECRET が正しく設定されていません。", flush=True)
         sys.exit(1)
 
     tokens = load_tokens()
     
     try:
         if tokens and "refresh_token" in tokens:
-            print("既存のトークンを使って認証を更新中...")
+            print("既存のトークンを使って認証を更新中...", flush=True)
             tokens = get_tokens(refresh_token=tokens["refresh_token"])
         else:
-            print("初回認証が必要です...")
+            print("初回認証が必要です...", flush=True)
             code = get_auth_code()
             if code:
                 tokens = get_tokens(code=code)
     except Exception as e:
-        print(f"トークンの更新に失敗しました。再認証を行います。 ({e})")
+        print(f"トークンの更新に失敗しました。再認証を行います。 ({e})", flush=True)
         code = get_auth_code()
         if code:
             tokens = get_tokens(code=code)
             
     if tokens and "access_token" in tokens:
-        print("APIからポートフォリオデータを取得中...")
+        print("APIからポートフォリオデータを取得中...", flush=True)
         fetch_and_save_portfolio(tokens["access_token"])
     else:
-        print("有効なアクセストークンが取得できませんでした。")
+        print("有効なアクセストークンが取得できませんでした。", flush=True)
 
 if __name__ == "__main__":
     main()
