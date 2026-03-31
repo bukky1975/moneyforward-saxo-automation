@@ -143,6 +143,14 @@ def update_google_sheets(positions):
         print(f"スプレッドシートへのアクセスに失敗しました: {repr(e)}")
         return
         
+    try:
+        spx_sheet = spreadsheet.worksheet("SPX")
+        now_str = datetime.now().strftime("%Y/%m/%d %H:%M")
+        spx_sheet.update_acell("A1", f"最終更新: {now_str}")
+        print(f"\n- シート 'SPX' の A1 セルにタイムスタンプ({now_str})を記録しました。")
+    except Exception as e:
+        print(f"\n- 警告: 'SPX' シートへのタイムスタンプ記録に失敗しました: {e}")
+        
     worksheets = spreadsheet.worksheets()
     # シートタイトルを正規化してDictにマップ
     sheet_map = {normalize_name(ws.title): ws for ws in worksheets}
