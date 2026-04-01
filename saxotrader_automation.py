@@ -11,7 +11,8 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from dotenv import load_dotenv
 from datetime import datetime
 import argparse
-
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
 # Load .env
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
@@ -276,14 +277,39 @@ def update_google_sheets(positions):
         else:
             print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})", flush=True)
 
-def copy_to_drive():
-    """レポートファイルをGoogleドライブの同期フォルダへコピー"""
-    if os.path.exists(DRIVE_PATH):
-        target = os.path.join(DRIVE_PATH, os.path.basename(OUTPUT_FILE))
-        shutil.copy2(OUTPUT_FILE, target)
-        print(f"Googleドライブ ({target}) にコピーしました。", flush=True)
-    else:
-        print(f"警告: Googleドライブのパスが見つかりません。コピーをスキップします: {DRIVE_PATH}", flush=True)
+def upload_to_google_docs():
+    """レポートファイル(output.txt)をGoogle Drive上の固定Docとして上書き保存"""
+    print("\nGoogle Docsへレポートをアップロード・上書き更新しています...")
+    if not os.path.exists(GOOGLE_CREDS_FILE):
+        print(f"アップロードスキップ: Google APIキー({GOOGLE_CREDS_FILE})が見つかりません。")
+        return
+
+    try:
+        scope = ["https://www.googleapis.com/auth/drive"]
+        creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_CREDS_FILE, scope)
+        service = build('drive', 'v3', credentials=creds)
+        
+        doc_title = "Saxo Bank 資産レポート (最新)"
+        query = f"name='{doc_title}' and mimeType='application/vnd.google-apps.document' and trashed=false"
+        results = service.files().list(q=query, spaces='drive', fields='files(id, name)').execute()
+        files = results.get('files', [])
+        
+        media = MediaFileUpload(OUTPUT_FILE, mimetype='text/plain', resumable=True)
+        
+        if not files:
+            file_metadata = {
+                'name': doc_title,
+                'mimeType': 'application/vnd.google-apps.document'
+            }
+            file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+            print(f"- Google Docsに新規ファイル '{doc_title}' を作成し、保存しました。(ID: {file.get('id')})")
+        else:
+            file_id = files[0].get('id')
+            file = service.files().update(fileId=file_id, media_body=media, fields='id').execute()
+            print(f"- 既存のGoogle Docs '{doc_title}' にデータを上書き更新しました。(ID: {file.get('id')})")
+            
+    except Exception as e:
+        print(f"Google Docsへのアップロードに失敗しました: {e}")
 
 def fetch_and_save_portfolio(access_token):
     headers = {"Authorization": f"Bearer {access_token}"}
@@ -404,8 +430,8 @@ def fetch_and_save_portfolio(access_token):
     # 最後にローカルに保存した建玉情報を使ってGoogle Sheetsを更新
     update_google_sheets(positions)
     
-    # Googleドライブ同期
-    copy_to_drive()
+    # Google Docs形式でアップロード
+    upload_to_google_docs()
 
 def main():
     parser = argparse.ArgumentParser(description="Saxo Bank Automation Tool")
