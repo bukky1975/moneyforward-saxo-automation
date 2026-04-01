@@ -289,8 +289,9 @@ def upload_to_google_docs():
         creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_CREDS_FILE, scope)
         service = build('drive', 'v3', credentials=creds)
         
+        folder_id = '1SNfCR6Feaf7DFVwONKELeTCzUHis12FK'
         doc_title = "Saxo Bank 資産レポート (最新)"
-        query = f"name='{doc_title}' and mimeType='application/vnd.google-apps.document' and trashed=false"
+        query = f"name='{doc_title}' and '{folder_id}' in parents and mimeType='application/vnd.google-apps.document' and trashed=false"
         results = service.files().list(q=query, spaces='drive', fields='files(id, name)').execute()
         files = results.get('files', [])
         
@@ -299,6 +300,7 @@ def upload_to_google_docs():
         if not files:
             file_metadata = {
                 'name': doc_title,
+                'parents': [folder_id],
                 'mimeType': 'application/vnd.google-apps.document'
             }
             file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
