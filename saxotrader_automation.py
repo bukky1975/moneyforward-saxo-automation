@@ -10,6 +10,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from dotenv import load_dotenv
 from datetime import datetime
+import argparse
 
 # Load .env
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
@@ -51,7 +52,7 @@ class OAuthCallbackHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Authorization failed.")
 
-def get_auth_code():
+def get_auth_code(is_manual=False):
     url = f"{AUTH_URL}?response_type=code&client_id={APP_KEY}&redirect_uri={urllib.parse.quote(REDIRECT_URI)}&state=123"
     
     global auth_code
@@ -94,6 +95,10 @@ def get_auth_code():
         print("Playwrightでの自動認証に成功しました！", flush=True)
         return auth_code
         
+    if not is_manual:
+        print("\n自動認証に失敗/タイムアウトしました。手動実行モード(--manual)ではないためブラウザUIを開かず終了します。", flush=True)
+        return None
+        
     print("\nPlaywrightでの自動認証に失敗/タイムアウトしました。手動での承認が必要です。", flush=True)
     print(f"手動認証UIを起動します...\nURL: {url}", flush=True)
     
@@ -101,21 +106,32 @@ def get_auth_code():
     
     class ReusableTCPServer(HTTPServer):
         allow_reuse_address = True
-        timeout = 180 # 3分でタイムアウト（cronでの無限ハング防止用）
+        timeout = 2.0 # 2秒ごとにタイムアウトしてループで再開（ブロッキング防止）
         
     server = ReusableTCPServer(('localhost', port), OAuthCallbackHandler)
     
     try:
-        webbrowser.open(url)
+        import subprocess
+        # macOS環境で明示的にGoogle Chromeを指定して開く
+        subprocess.run(["open", "-a", "Google Chrome", url], check=True)
     except Exception as e:
-        print(f"ブラウザ起動エラー: {e}", flush=True)
-        
+        print(f"Chrome指定での起動に失敗しました。デフォルトブラウザで開きます: {e}", flush=True)
+        try:
+            webbrowser.open(url)
+        except Exception as ex:
+            print(f"ブラウザ起動エラー: {ex}", flush=True)
+            
     print("手動での認証完了を待機しています（最大180秒）...", flush=True)
-    server.handle_request()
+    
+    # URLへの事前アクセス等（faviconなど）でサーバーが終了しないよう、ループで待機する
+    start_time = time.time()
+    while not auth_code and (time.time() - start_time) < 180:
+        server.handle_request()
+        
     server.server_close()
     
     if not auth_code:
-        print("認証が完了しませんでした（タイムアウト）。", flush=True)
+        print("認証が完了しませんでした（タイムアウト または 中断）。", flush=True)
     return auth_code
 
 def get_tokens(code=None, refresh_token=None):
@@ -235,11 +251,10 @@ def update_google_sheets(positions):
             theta = custom.get("Theta", "")
             iv = custom.get("IV", "")
             
-            # A:日付, B:数量, C:購入価格, D:現在値, E:評価損益, F:IV, G:Delta, H:Gamma, I:Vega, J:Theta
-            row_data = [
-                today_str, amount, purchase_price, current_price, pl, 
-                iv, delta, gamma, vega, theta
-            ]
+            # A:日付, B:数量, C:購入価格, D:現在値, E:評価損益
+            row_data_base = [today_str, amount, purchase_price, current_price, pl]
+            # I:IV, J:Delta, K:Gamma, L:Vega, M:Theta
+            row_data_greeks = [iv, delta, gamma, vega, theta]
             
             # 列Aの最初の空行を探す (先頭からスキャンして、空行または今日の日付の行を特定)
             col_a = ws.col_values(1)
@@ -252,8 +267,11 @@ def update_google_sheets(positions):
             else:
                 row_index = len(col_a) + 1
             
-            cell_range = f"A{row_index}:J{row_index}"
-            ws.update(range_name=cell_range, values=[row_data])
+            # A列からE列まで基本データを書き込み
+            ws.update(range_name=f"A{row_index}:E{row_index}", values=[row_data_base])
+            # F列からJ列にかけてグリークス(IV, Delta, Gamma, Vega, Theta)を書き込み
+            ws.update(range_name=f"F{row_index}:J{row_index}", values=[row_data_greeks])
+            
             print(f"- シート '{ws.title}' に本日のデータを記録しました！ (行: {row_index})", flush=True)
         else:
             print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})", flush=True)
@@ -390,6 +408,10 @@ def fetch_and_save_portfolio(access_token):
     copy_to_drive()
 
 def main():
+    parser = argparse.ArgumentParser(description="Saxo Bank Automation Tool")
+    parser.add_argument("--manual", action="store_true", help="Launch manual login UI if auto-login fails.")
+    args = parser.parse_args()
+
     if not APP_KEY or not APP_SECRET:
         print("エラー: .env に SAXO_APP_KEY と SAXO_APP_SECRET が正しく設定されていません。", flush=True)
         sys.exit(1)
@@ -402,20 +424,25 @@ def main():
             tokens = get_tokens(refresh_token=tokens["refresh_token"])
         else:
             print("初回認証が必要です...", flush=True)
-            code = get_auth_code()
+            code = get_auth_code(is_manual=args.manual)
             if code:
                 tokens = get_tokens(code=code)
     except Exception as e:
         print(f"トークンの更新に失敗しました。再認証を行います。 ({e})", flush=True)
-        code = get_auth_code()
+        code = get_auth_code(is_manual=args.manual)
         if code:
             tokens = get_tokens(code=code)
+        else:
+            tokens = None # 認証が完了しなかった場合は古いトークンを破棄
             
     if tokens and "access_token" in tokens:
         print("APIからポートフォリオデータを取得中...", flush=True)
-        fetch_and_save_portfolio(tokens["access_token"])
+        try:
+            fetch_and_save_portfolio(tokens["access_token"])
+        except Exception as ex:
+            print(f"ポートフォリオデータの取得中にエラーが発生しました: {ex}", flush=True)
     else:
-        print("有効なアクセストークンが取得できませんでした。", flush=True)
+        print("\n[中断] 有効なアクセストークンが取得できなかったため、Saxo Bankのデータ更新とスプレッドシートへの書き込みをスキップしました。", flush=True)
 
 if __name__ == "__main__":
     main()
