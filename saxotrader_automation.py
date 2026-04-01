@@ -278,8 +278,8 @@ def update_google_sheets(positions):
             print(f"- 警告: 対応するシートが見つからないためスキップ: (推測キー: {generate_target_sheet_name(pos)})", flush=True)
 
 def upload_to_google_docs():
-    """レポートファイル(output.txt)をGoogle Drive上の固定Docとして上書き保存"""
-    print("\nGoogle Docsへレポートをアップロード・上書き更新しています...")
+    """レポートファイル(output.txt)をすでに作成済みのDocsへ上書き保存"""
+    print("\nGoogle Docsへレポートを上書き更新しています...")
     if not os.path.exists(GOOGLE_CREDS_FILE):
         print(f"アップロードスキップ: Google APIキー({GOOGLE_CREDS_FILE})が見つかりません。")
         return
@@ -289,26 +289,21 @@ def upload_to_google_docs():
         creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_CREDS_FILE, scope)
         service = build('drive', 'v3', credentials=creds)
         
-        folder_id = '1SNfCR6Feaf7DFVwONKELeTCzUHis12FK'
-        doc_title = "Saxo Bank 資産レポート (最新)"
-        query = f"name='{doc_title}' and '{folder_id}' in parents and mimeType='application/vnd.google-apps.document' and trashed=false"
+        doc_title = "Saxo Bank 資産レポート（自動更新用）"
+        # オーナーのユーザー自身がすでに作成したファイルを検索する
+        query = f"name='{doc_title}' and mimeType='application/vnd.google-apps.document' and trashed=false"
         results = service.files().list(q=query, spaces='drive', fields='files(id, name)').execute()
         files = results.get('files', [])
         
-        media = MediaFileUpload(OUTPUT_FILE, mimetype='text/plain', resumable=True)
-        
         if not files:
-            file_metadata = {
-                'name': doc_title,
-                'parents': [folder_id],
-                'mimeType': 'application/vnd.google-apps.document'
-            }
-            file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
-            print(f"- Google Docsに新規ファイル '{doc_title}' を作成し、保存しました。(ID: {file.get('id')})")
-        else:
-            file_id = files[0].get('id')
-            file = service.files().update(fileId=file_id, media_body=media, fields='id').execute()
-            print(f"- 既存のGoogle Docs '{doc_title}' にデータを上書き更新しました。(ID: {file.get('id')})")
+            print(f"エラー: Google Docs '{doc_title}' が見つかりませんでした。ご自身のドライブにて該当名で空のDocsを新規作成してください。")
+            return
+            
+        file_id = files[0].get('id')
+        media = MediaFileUpload(OUTPUT_FILE, mimetype='text/plain', resumable=True)
+        # 更新(update)のみを行う（サービスアカウントは容量ゼロのためcreateできない）
+        file = service.files().update(fileId=file_id, media_body=media, fields='id').execute()
+        print(f"- 既存のGoogle Docs '{doc_title}' にデータを上書き更新しました。(ID: {file.get('id')})")
             
     except Exception as e:
         print(f"Google Docsへのアップロードに失敗しました: {e}")

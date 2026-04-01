@@ -5,6 +5,10 @@ import shutil
 from datetime import datetime
 from playwright.sync_api import sync_playwright
 
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
+from oauth2client.service_account import ServiceAccountCredentials
+
 from dotenv import load_dotenv
 
 # .env を読み込み
@@ -183,26 +187,42 @@ def scrape_moneyforward():
         print(f"データを {LOCAL_PATH} に保存しました。", flush=True)
         context.close()
 
-def copy_to_drive():
-    if os.path.exists(DRIVE_PATH):
-        # マネフォ資産データのコピー
-        target_mf = os.path.join(DRIVE_PATH, OUTPUT_FILENAME)
-        shutil.copy2(LOCAL_PATH, target_mf)
-        print(f"Googleドライブ ({target_mf}) にコピーしました。", flush=True)
+def upload_to_google_docs():
+    """レポートファイル(assets_data.txt)をすでに作成済みのDocsへ上書き保存"""
+    print("\nGoogle Docsへレポートを上書き更新しています...")
+    GOOGLE_CREDS_FILE = os.path.join(os.path.dirname(__file__), "google_credentials.json")
+    if not os.path.exists(GOOGLE_CREDS_FILE):
+        print(f"アップロードスキップ: Google APIキー({GOOGLE_CREDS_FILE})が見つかりません。")
+        return
 
-        # Saxo資産データのコピー (存在する場合のみ)
-        saxo_local = os.path.join(os.path.dirname(__file__), "saxo_assets.txt")
-        if os.path.exists(saxo_local):
-            target_saxo = os.path.join(DRIVE_PATH, "saxo_assets.txt")
-            shutil.copy2(saxo_local, target_saxo)
-            print(f"Googleドライブ ({target_saxo}) にコピーしました。", flush=True)
-    else:
-        print(f"エラー: Googleドライブのパスが見つかりません: {DRIVE_PATH}", flush=True)
+    try:
+        scope = ["https://www.googleapis.com/auth/drive"]
+        creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_CREDS_FILE, scope)
+        service = build('drive', 'v3', credentials=creds)
+        
+        doc_title = "マネフォ資産レポート（自動更新用）"
+        # オーナーのユーザー自身がすでに作成したファイルを検索する
+        query = f"name='{doc_title}' and mimeType='application/vnd.google-apps.document' and trashed=false"
+        results = service.files().list(q=query, spaces='drive', fields='files(id, name)').execute()
+        files = results.get('files', [])
+        
+        if not files:
+            print(f"エラー: Google Docs '{doc_title}' が見つかりませんでした。ご自身のドライブにて該当名で空のDocsを新規作成してください。")
+            return
+            
+        file_id = files[0].get('id')
+        media = MediaFileUpload(LOCAL_PATH, mimetype='text/plain', resumable=True)
+        # 更新(update)のみを行う（サービスアカウントは容量ゼロのためcreateできない）
+        file = service.files().update(fileId=file_id, media_body=media, fields='id').execute()
+        print(f"- 既存のGoogle Docs '{doc_title}' にデータを上書き更新しました。(ID: {file.get('id')})")
+            
+    except Exception as e:
+        print(f"Google Docsへのアップロードに失敗しました: {e}")
 
 if __name__ == "__main__":
     try:
         scrape_moneyforward()
-        copy_to_drive()
+        upload_to_google_docs()
         print("すべての処理が完了しました。", flush=True)
     except Exception as e:
         print(f"エラーが発生しました: {e}", flush=True)
