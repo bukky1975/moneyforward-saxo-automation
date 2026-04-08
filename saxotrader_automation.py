@@ -59,49 +59,7 @@ def get_auth_code(is_manual=False):
     global auth_code
     auth_code = None
 
-    print("\nPlaywrightを使用してSaxoの自動認証（セッション再利用）を試みます...", flush=True)
-    try:
-        from playwright.sync_api import sync_playwright
-        import time
-        USER_DATA_DIR = os.path.join(os.path.dirname(__file__), ".playwright_data")
-        if os.path.exists(USER_DATA_DIR):
-            with sync_playwright() as p:
-                context = p.chromium.launch_persistent_context(USER_DATA_DIR, headless=True)
-                page = context.new_page()
-                
-                def handle_route(route, request):
-                    global auth_code
-                    if request.url.startswith("http://localhost:12321"):
-                        parsed = urllib.parse.urlparse(request.url)
-                        query = urllib.parse.parse_qs(parsed.query)
-                        if "code" in query:
-                            auth_code = query["code"][0]
-                        route.abort()
-                    else:
-                        route.continue_()
-
-                context.route("**/*", handle_route)
-                
-                try:
-                    page.goto(url, wait_until="load", timeout=20000)
-                    time.sleep(3)
-                except Exception:
-                    pass
-                finally:
-                    context.close()
-    except Exception as e:
-        print(f"Playwright自動認証中にテストエラー: {e}", flush=True)
-
-    if auth_code:
-        print("Playwrightでの自動認証に成功しました！", flush=True)
-        return auth_code
-        
-    if not is_manual:
-        print("\n自動認証に失敗/タイムアウトしました。手動実行モード(--manual)ではないためブラウザUIを開かず終了します。", flush=True)
-        return None
-        
-    print("\nPlaywrightでの自動認証に失敗/タイムアウトしました。手動での承認が必要です。", flush=True)
-    print(f"手動認証UIを起動します...\nURL: {url}", flush=True)
+    print(f"\n手動認証UIを起動します...\nURL: {url}", flush=True)
     
     port = int(urllib.parse.urlparse(REDIRECT_URI).port or 12321)
     
@@ -124,6 +82,7 @@ def get_auth_code(is_manual=False):
             
     print("手動での認証完了を待機しています（最大180秒）...", flush=True)
     
+    import time
     # URLへの事前アクセス等（faviconなど）でサーバーが終了しないよう、ループで待機する
     start_time = time.time()
     while not auth_code and (time.time() - start_time) < 180:
