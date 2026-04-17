@@ -20,8 +20,8 @@ FEEDS = [
         "url": "https://www.nhk.or.jp/rss/news/cat5.xml"
     },
     {
-        "category": "【海外ニュース】 CNBC (Finance)",
-        "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?profile=10000664"
+        "category": "【海外ニュース】 MarketWatch (Top Stories)",
+        "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
     },
     {
         "category": "【海外ニュース】 Investing.com (Markets)",

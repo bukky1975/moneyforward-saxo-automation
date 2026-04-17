@@ -1,194 +1,346 @@
 === 最新経済ニュース ===
-取得日時: 2026-04-09 06:37:43
+取得日時: 2026-04-17 13:24:24
 
-■ 【国内ニュース】 (Japanese) - Yahoo!ニュース（経済）
+■ 【国内ニュース】 Yahoo!ニュース（経済）
 ----------------------------------------
-・「おかず豊富すぎてご飯たらない」ほっともっとの“てんこ盛り弁当”大人のお子様ランチみたいで豪華！「ガチご馳走」「オールスター感がある」(ダイヤモンド・オンライン)
-  Wed, 08 Apr 2026 21:35:23 GMT
-  https://news.yahoo.co.jp/articles/1d9c148dfc0904b582d3672c76fe74c4e64da498?source=rss
+・ドバイ、観光トップが「現地の今」を伝えるメッセージ配信、日常生活は通常通り、正確な情報の共有を(トラベルボイス)
+  Fri, 17 Apr 2026 04:20:09 GMT
+  https://news.yahoo.co.jp/articles/1e0d045e9027aad7eef8e2fc512e0ebf53151c99?source=rss
 
-・贅沢はしてないのに「貯金が減少する人」が無意識にやっている、毎日の生活習慣(ダイヤモンド・オンライン)
-  Wed, 08 Apr 2026 21:35:23 GMT
-  https://news.yahoo.co.jp/articles/f8950d6cda238b354aa2fed02a0d94e6eb0b29a8?source=rss
+・マクドナルド「株主優待券5000円分」が“3000円”で売られてるのを発見！ でも“転売品は規約違反”なら「買うだけ損」ですか？ 優待内容や必要投資額も確認(ファイナンシャルフィールド)
+  Fri, 17 Apr 2026 04:20:02 GMT
+  https://news.yahoo.co.jp/articles/80aa2511caf5b074386eb1df45333f8954799814?source=rss
 
-・AIを使って「評価を下げる人」と「評価される人」の決定的な違い(ダイヤモンド・オンライン)
-  Wed, 08 Apr 2026 21:35:23 GMT
-  https://news.yahoo.co.jp/articles/a0130d3a4b24b5714834132fc6936e3a720b055b?source=rss
+・ブラザー、インバウンド向け体験型施設を開業、ミシン使った和風小物作りやサムライ体験など(トラベルボイス)
+  Fri, 17 Apr 2026 04:10:23 GMT
+  https://news.yahoo.co.jp/articles/2c17e1911e9dc80b36bb155dd41b01bec5ce747a?source=rss
 
-・「電話も雑談も無理です」と逃げる部下は無能か？心理学者が明かす“コミュ力不足”の裏に隠された意外な才能(ダイヤモンド・オンライン)
-  Wed, 08 Apr 2026 21:35:23 GMT
-  https://news.yahoo.co.jp/articles/5ee79ab9decfca8acb81c08a9849b1998919bdc8?source=rss
+・ホンダ「フリード」改良モデルまもなく登場か!? 「エアーの5人乗り」＆精悍な「ブラックスタイル」新設定に「これぞ本命！」と期待の声！ 進化した「コンパクトミニバン」への反響は？(くるまのニュース)
+  Fri, 17 Apr 2026 04:10:00 GMT
+  https://news.yahoo.co.jp/articles/fce3dd3b1e1a56901336b6c17c65712b91a4ec5a?source=rss
 
-・ガソリン高時代に"買って納得"のコスパ最強カーBEST7(週プレNEWS)
-  Wed, 08 Apr 2026 21:32:54 GMT
-  https://news.yahoo.co.jp/articles/3ae23cc67048497bf93accf3743854a7719ccbc0?source=rss
+・トヨタ、クラウン「特等席に浸ろう」キャンペーンを開始。クラウン全4モデルが対象【全国のトヨタ販売店で“全席特等席”を体感する新企画】(月刊自家用車WEB)
+  Fri, 17 Apr 2026 04:10:00 GMT
+  https://news.yahoo.co.jp/articles/9929f9ca4a2eb173d07416df135be6facbb3cceb?source=rss
 
-・タイ人の耐性スゴっ！　ガソリン価格高騰＆売り切れ続出でもうろたえない国民性に尊敬しかない(WEB CARTOP)
-  Wed, 08 Apr 2026 21:31:54 GMT
-  https://news.yahoo.co.jp/articles/f70d6dda5c70794eca244b4025048ceaa1f76ccc?source=rss
+・不要の「推し活グッズ」「家電ケーブル」回収・資源循環　三井不動産(Impress Watch)
+  Fri, 17 Apr 2026 04:06:51 GMT
+  https://news.yahoo.co.jp/articles/2172e0e5ab195707159efaadb37f613d735e3980?source=rss
 
-・ファミリーマート “超も～っちり”で食感進化 人気パン3品を全国発売(食品新聞)
-  Wed, 08 Apr 2026 21:31:32 GMT
-  https://news.yahoo.co.jp/articles/84860e5a47edc45a786360219f77e37c66c7b434?source=rss
+・ガーナチョコを使ったスイーツ3品登場!今年の新作は「チョコレートスフレ」【銀座コージーコーナー】(食品産業新聞社ニュースWEB)
+  Fri, 17 Apr 2026 04:05:51 GMT
+  https://news.yahoo.co.jp/articles/a6ea48d60e6e7b4ca72563588e88ac9bdb8ac30f?source=rss
 
-・ローソン 「からあげクン」40周年 軽食ニーズ捉え支持拡大(食品新聞)
-  Wed, 08 Apr 2026 21:31:05 GMT
-  https://news.yahoo.co.jp/articles/00991a2747e5594c1c1ccf4c3e06ffed584301b3?source=rss
+・吉田カバン「ポーター」が人気シリーズ“タンカー”のポップアップ　全120アイテムが集結(WWDJAPAN.com)
+  Fri, 17 Apr 2026 04:05:00 GMT
+  https://news.yahoo.co.jp/articles/53c895f329f30eb865cc33e20d4bb5361feae52f?source=rss
 
-・「勉強しないでゲームばかり」と思うなかれ。RPGに学ぶ、子どものやる気を引き出すコツ （森知香 メンタルトレーナー）(シェアーズカフェ・オンライン)
-  Wed, 08 Apr 2026 21:30:49 GMT
-  https://news.yahoo.co.jp/articles/65dc9a520e49b728256e2124137c077cec492690?source=rss
+・英国で旅行控えの傾向、2026年3月の旅行支出は3.3％減、中東情勢による燃料高騰で(トラベルボイス)
+  Fri, 17 Apr 2026 04:01:25 GMT
+  https://news.yahoo.co.jp/articles/a495900723fec4e58214762a5106278a2468c10e?source=rss
 
-・ニセコなど一目瞭然…「外国人による日本の土地取得」一覧/海外投資家が買い叩く《日本の3つの資産》とは(東洋経済オンライン)
-  Wed, 08 Apr 2026 21:30:40 GMT
-  https://news.yahoo.co.jp/articles/5d4f19024ac99bd9f68bd6ee06b939df05a3567b?source=rss
+・ランニング時にスマートウォッチの性能を引き出す5つのハック(ライフハッカー・ジャパン)
+  Fri, 17 Apr 2026 04:01:01 GMT
+  https://news.yahoo.co.jp/articles/15fe7ba8b5ec0914e20df3df6d56745397148410?source=rss
 
-・「新人が辞めない職場」がやっている意図的な声かけ （李怜香 社会保険労務士）(シェアーズカフェ・オンライン)
-  Wed, 08 Apr 2026 21:30:35 GMT
-  https://news.yahoo.co.jp/articles/f53c24b8f4bdd468d855d57e04b8a0e3881cf878?source=rss
+・センスがなくても打ち手の案が「量産」できる4つの思考法。天才的なひらめきに頼らずに良いたたき台を作る人の頭の中(東洋経済オンライン)
+  Fri, 17 Apr 2026 04:00:38 GMT
+  https://news.yahoo.co.jp/articles/6eb908bb7a62a18c593b286ca9f50d4aa0446aa7?source=rss
 
-・星街すいせいはなぜ卒業しないのか？カバーが選んだ「囲い込まない経営」 （濵口誠一 中小企業診断士）(シェアーズカフェ・オンライン)
-  Wed, 08 Apr 2026 21:30:22 GMT
-  https://news.yahoo.co.jp/articles/46ea6e5b6a5d890d5db4ba43ff45a35c60191719?source=rss
+・ヒューマノイドの「脳」供給で顧客400社　中国「D-Robotics」、設立2年で累計590億調達(36Kr Japan)
+  Fri, 17 Apr 2026 04:00:10 GMT
+  https://news.yahoo.co.jp/articles/678160b3ebc52f6ebbea59960e47437721061b60?source=rss
 
-・「BMW Z3から轟くロータリーサウンド」380馬力ターボで国産勢を食う怪物ロードスター！(MotorFan)
-  Wed, 08 Apr 2026 21:30:00 GMT
-  https://news.yahoo.co.jp/articles/ea2b935891fdee8ab361dd99e108208ed154d8a3?source=rss
+・メルセデスベンツ『Cクラス』新型、インテリアを先行公開…4月20日ワールドプレミアへ(レスポンス)
+  Fri, 17 Apr 2026 04:00:04 GMT
+  https://news.yahoo.co.jp/articles/ae89170e3df06d94a5d027bc2461ee259a401f08?source=rss
 
-・NY円、158円台後半(共同通信)
-  Wed, 08 Apr 2026 21:28:11 GMT
-  https://news.yahoo.co.jp/articles/43942366e52e4827c737396d8f62c564253ad020?source=rss
+・「異端クラウン、爆誕」ベンコラ6人乗りのレアなUZS131を極低車高化した男の物語(MotorFan)
+  Fri, 17 Apr 2026 04:00:00 GMT
+  https://news.yahoo.co.jp/articles/3254e6bde1c73c0b0bbfedfb82bdd69bb47087d8?source=rss
 
-・“軽自動車より小さい”「EV-eCo」に注目！ “全長2.4m”で車検・車庫証明不要な超小型電動ミニカーとは？ アントレックスの「スリムなクルマ」はどんな仕様？(くるまのニュース)
-  Wed, 08 Apr 2026 21:25:00 GMT
-  https://news.yahoo.co.jp/articles/87b6f1c36aedd15fe80b0595c5554129a2057b7a?source=rss
+・株価が1年で2700%上昇、AIブームの波に乗るデータストレージ企業サンディスク(Forbes JAPAN)
+  Fri, 17 Apr 2026 04:00:00 GMT
+  https://news.yahoo.co.jp/articles/8dcd80ac7ea33d117f709f409ca365335d020369?source=rss
 
 
 
-■ 【海外ニュース】 (English) - Financial Times (Markets)
+■ 【国内ニュース】 NHKニュース（ビジネス）
 ----------------------------------------
-・Wells Fargo whistleblower award slashed by Wall Street watchdog
-  Wed, 08 Apr 2026 21:27:13 GMT
-  https://www.ft.com/content/b18fff7e-0797-4dba-bec6-4f8843cffd13
+・JR北海道の“黄線区”上下分離案 金子国交相「十分議論を」
+  Fri, 17 Apr 2026 13:07:50 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101481000
 
-・Stocks leap as Iran ceasefire sparks global ‘relief rally’
-  Wed, 08 Apr 2026 20:29:26 GMT
-  https://www.ft.com/content/0666acf3-2d74-4b44-b0aa-55afb628aa48
+・鈴木農相 “加工・米粉など主食用以外のコメ生産促す”
+  Fri, 17 Apr 2026 12:31:16 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101471000
 
-・SEC names Gibson Dunn partner David Woodcock to run enforcement unit
-  Wed, 08 Apr 2026 19:47:09 GMT
-  https://www.ft.com/content/31e3484b-eab5-4bfe-840e-3131eff6c20b
+・軽油カルテルで公取委が5社を独禁法違反疑いで刑事告発
+  Fri, 17 Apr 2026 12:28:42 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101511000
 
-・Middle East ceasefire under pressure over Israeli strikes on Lebanon
-  Wed, 08 Apr 2026 19:36:44 GMT
-  https://www.ft.com/content/d43ae1d7-4df4-465c-afe1-418b168e3ae8
+・株価 値下がり 半導体関連などの銘柄が売られる
+  Fri, 17 Apr 2026 12:13:42 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101521000
 
-・Go to court and lose out on £9bn car finance redress scheme, says FCA boss
-  Wed, 08 Apr 2026 18:05:34 GMT
-  https://www.ft.com/content/1b2db60f-df18-4e39-ba87-a9b9188bbd22
+・アジアが米国産原油に注目“超大型タンカー予約難しく”米報道
+  Fri, 17 Apr 2026 12:00:37 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101431000
 
-・JD Vance to lead US delegation in Islamabad talks
-  Wed, 08 Apr 2026 17:57:54 GMT
-  https://www.ft.com/content/2868ed5b-865f-4491-a78e-c84967d50c34
+・赤澤経産相 “塗料用シンナーや一部住宅設備の供給にめど”
+  Fri, 17 Apr 2026 11:56:30 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101441000
 
-・SEC chair says US states should lead on policing corporate behaviour
-  Wed, 08 Apr 2026 17:32:59 GMT
-  https://www.ft.com/content/dbcb7cf1-be7c-4029-87ce-f10486182ca6
+・日銀 植田総裁 “負の供給ショック”踏まえ金融政策を判断
+  Fri, 17 Apr 2026 11:40:51 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101421000
 
-・Our quest not to solve bitcoin’s great mystery
-  Wed, 08 Apr 2026 17:02:39 GMT
-  https://www.ft.com/content/94bb72e4-4282-4544-8c42-da7eebb8a938
+・ルフトハンザ航空子会社27機運航停止へ 燃料費高騰など受け
+  Fri, 17 Apr 2026 06:48:02 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101321000
 
-・How this oil shock unwinds
-  Wed, 08 Apr 2026 15:53:04 GMT
-  https://www.ft.com/content/ad32a5f9-daff-400e-93cf-ddd1c171a430
+・ナスダック指数最高値更新 12営業日連続上昇は2009年以来
+  Fri, 17 Apr 2026 06:45:33 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101331000
 
-・European bonds surge as traders trim bets on interest rate rises
-  Wed, 08 Apr 2026 15:23:07 GMT
-  https://www.ft.com/content/d95b2a55-9441-4d68-80e3-1dee0ead31c8
+・G20財務相中銀総裁会議が終了 議長国アメリカのもとで議論
+  Fri, 17 Apr 2026 05:14:04 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101221000
 
-・Saudi Arabia’s key east-west oil pipeline hit as Middle East energy attacks continue
-  Wed, 08 Apr 2026 14:34:42 GMT
-  https://www.ft.com/content/115eb832-9a62-424f-a893-57156ce8abf7
+・滋賀銀行と池田泉州HD 資本業務提携で最終調整
+  Thu, 16 Apr 2026 21:07:34 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101121000
 
-・Exxon warns of $6.5bn hit from Iran war
-  Wed, 08 Apr 2026 11:01:06 GMT
-  https://www.ft.com/content/f1c0b0d4-7769-45b4-95b5-870fa9752a76
+・サンリオ 常務が不適切な報酬受領の疑いで調査始める
+  Thu, 16 Apr 2026 20:19:16 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101061000
 
-・Extreme weather is already costing global businesses
-  Wed, 08 Apr 2026 11:00:07 GMT
-  https://www.ft.com/content/114db5d3-4c48-45e1-8772-b61dac45d0f4
+・イラン情勢影響広がる 資材の費用上昇 資材そのもの入手困難に
+  Thu, 16 Apr 2026 19:40:37 +0900
+  https://news.web.nhk/newsweb/na/na-k10015100871000
 
-・US and Iran agree 2-week ceasefire that will open Strait of Hormuz
-  Wed, 08 Apr 2026 10:56:43 GMT
-  https://www.ft.com/content/d8e9e0e9-9417-47ad-a915-ba08049d643f
+・株価 終値の最高値更新 米イランの協議進展に期待
+  Thu, 16 Apr 2026 19:03:57 +0900
+  https://news.web.nhk/newsweb/na/na-k10015100561000
 
-・European repo is absolutely massive
-  Wed, 08 Apr 2026 10:15:52 GMT
-  https://www.ft.com/content/990a8388-07e3-464a-b52f-b6104618ca56
+・円相場 対ドルで小幅な値動き 米イラン協議の行方見極め
+  Thu, 16 Apr 2026 18:15:43 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101011000
 
 
 
-■ 【海外ニュース】 (English) - Wall Street Journal (Markets)
+■ 【海外ニュース】 MarketWatch (Top Stories)
 ----------------------------------------
-・Stocks Sink in Broad AI Rout Sparked by China's DeepSeek
-  Mon, 27 Jan 2025 14:26:00 -0500
-  https://www.wsj.com/articles/nikkei-may-rise-as-weak-yen-raises-earnings-hopes-776a8056?mod=rss_markets_main
+・Former Treasury Secretary Henry Paulson warns U.S. needs an emergency ‘break-the-glass’ plan if Treasury demand collapses
+  Fri, 17 Apr 2026 04:11:00 GMT
+  https://www.marketwatch.com/story/former-treasury-secretary-henry-paulson-warns-u-s-needs-an-emergency-break-the-glass-plan-if-treasury-demand-collapses-051e2a2c?mod=mw_rss_topstories
 
-・Comex Gold, Silver Settle Lower
-  Mon, 27 Jan 2025 14:01:00 -0500
-  https://www.wsj.com/articles/gold-edges-lower-feds-rate-decision-in-focus-09dbfceb?mod=rss_markets_main
+・Jury finds that Live Nation is an illegal monopoly, but a breakup with Ticketmaster is unlikely, analysts say
+  Fri, 17 Apr 2026 04:06:00 GMT
+  https://www.marketwatch.com/story/jury-finds-that-live-nation-is-an-illegal-monopoly-but-a-breakup-with-ticketmaster-is-unlikely-analysts-say-b45f0c00?mod=mw_rss_topstories
 
-・DeepSeek Won't Sink U.S. AI Titans
-  Mon, 27 Jan 2025 13:12:00 -0500
-  https://www.wsj.com/articles/deepseek-us-ai-stocks-nvidia-broadcom-6cdfae81?mod=rss_markets_main
+・2 expensive mistakes most retirees make — and how to avoid them
+  Fri, 17 Apr 2026 02:33:00 GMT
+  https://www.marketwatch.com/story/2-expensive-mistakes-most-retirees-make-and-how-to-avoid-them-89183679?mod=mw_rss_topstories
 
-・Financial Services Roundup: Market Talk
-  Mon, 27 Jan 2025 12:27:00 -0500
-  https://www.wsj.com/articles/financial-services-roundup-market-talk-94f52cba?mod=rss_markets_main
+・Netflix co-founder Reed Hastings to exit company, saying it’s so strong it doesn’t need him anymore
+  Fri, 17 Apr 2026 01:00:00 GMT
+  https://www.marketwatch.com/story/netflix-shatters-profit-expectations-thanks-to-price-increase-and-2-8-billion-breakup-fee-from-warner-bros-ea3a80f8?mod=mw_rss_topstories
 
-・Arabica Coffee Prices Hit Record on U.S., Colombia Tariff Spat
-  Mon, 27 Jan 2025 12:20:00 -0500
-  https://www.wsj.com/articles/arabica-coffee-prices-hit-new-high-on-u-s-colombia-tariff-spat-582446fe?mod=rss_markets_main
+・Mutual insurance companies are paying record-breaking dividends to their customers this year. Is using one right for you?
+  Thu, 16 Apr 2026 23:59:00 GMT
+  https://www.marketwatch.com/story/mutual-insurance-companies-are-paying-record-breaking-dividends-to-their-customers-this-year-is-using-one-right-for-you-cb6717e8?mod=mw_rss_topstories
 
-・Swiss franc, Japanese yen Rise as DeepSeek News Boosts Safe Havens
-  Mon, 27 Jan 2025 09:55:00 -0500
-  https://www.wsj.com/articles/safe-haven-currencies-strengthen-amid-fears-over-global-tariffs-9964e17a?mod=rss_markets_main
+・With the largest industrial IPO since 1999, this air-quality giant’s stock opens with a bang
+  Thu, 16 Apr 2026 23:55:00 GMT
+  https://www.marketwatch.com/story/with-the-largest-industrial-ipo-since-1999-this-air-quality-giant-is-going-public-08a50184?mod=mw_rss_topstories
 
-・Natural Gas Falls on Shifting Weather Forecasts
-  Mon, 27 Jan 2025 09:05:00 -0500
-  https://www.wsj.com/articles/u-s-natural-gas-futures-fall-on-shifting-weather-forecasts-1ef3e457?mod=rss_markets_main
+・Pepsi says price cuts and wellness push are bringing back customers — and the stock surges
+  Thu, 16 Apr 2026 23:33:00 GMT
+  https://www.marketwatch.com/story/pepsi-says-price-cuts-and-wellness-push-are-bringing-back-customers-and-the-stock-surges-e6e5ea05?mod=mw_rss_topstories
 
-・Building-Products Distributor QXO Launches Hostile Bid for Beacon
-  Mon, 27 Jan 2025 08:28:00 -0500
-  https://www.wsj.com/articles/building-products-distributor-qxo-launching-hostile-bid-for-beacon-de024410?mod=rss_markets_main
+・AMD has ‘indispensable assets’ — powering the stock toward its best run in two decades
+  Thu, 16 Apr 2026 22:58:00 GMT
+  https://www.marketwatch.com/story/amd-has-indispensable-assets-powering-the-stock-toward-its-best-run-in-two-decades-aa44c469?mod=mw_rss_topstories
 
-・Natural-Gas Firm Diversified Energy Strikes Deal for Permian Basin Player
-  Mon, 27 Jan 2025 06:57:00 -0500
-  https://www.wsj.com/articles/natural-gas-firm-diversified-energy-nears-deal-for-permian-basin-player-4c1c5ff5?mod=rss_markets_main
+・Microsoft’s stock sees its best four-day stretch in six years — with an extreme bounce
+  Thu, 16 Apr 2026 22:45:00 GMT
+  https://www.marketwatch.com/story/microsofts-stock-sees-its-best-four-day-stretch-in-six-years-with-an-extreme-bounce-3eb834d6?mod=mw_rss_topstories
 
-・What's New This Tax Season That Can Save You Money
-  Mon, 27 Jan 2025 05:30:00 -0500
-  https://www.wsj.com/articles/tax-season-2024-irs-filing-dates-explained-628a8b37?mod=rss_markets_main
+・‘Felony charges are pending’: My mother set up a trust for my sibling who stole $100,000 from a bank. Can the trust be seized?
+  Thu, 16 Apr 2026 22:30:00 GMT
+  https://www.marketwatch.com/story/felony-charges-are-pending-my-mother-set-up-a-trust-for-my-sibling-who-stole-100-000-from-a-bank-can-the-trust-be-seized-ae69dbaf?mod=mw_rss_topstories
 
-・Chinese Investors With Few Options Turn to Dividends
-  Mon, 27 Jan 2025 05:30:00 -0500
-  https://www.wsj.com/articles/chinese-investors-with-few-options-turn-to-dividends-ad31dcc4?mod=rss_markets_main
 
-・U.S. Treasury Yields Fall But Direction for Long-End Yields Still Seen Upward
-  Mon, 27 Jan 2025 05:02:00 -0500
-  https://www.wsj.com/articles/jgbs-consolidate-supported-by-u-s-treasurys-gains-7edccc7d?mod=rss_markets_main
 
-・Russia's Crude Exports Fairly Stable Despite U.S. Sanctions, Goldman Says
-  Mon, 27 Jan 2025 04:46:00 -0500
-  https://www.wsj.com/articles/oil-futures-fall-after-trump-calls-for-tariffs-on-colombia-5b2a178c?mod=rss_markets_main
+■ 【海外ニュース】 Investing.com (Markets)
+----------------------------------------
+・Circle faces lawsuit over failure to freeze funds in Drift Protocol hack
+  2026-04-17 04:15:14
+  https://www.investing.com/news/stock-market-news/circle-faces-lawsuit-over-failure-to-freeze-funds-in-drift-protocol-hack-4619705
 
-・The Extra Reward for Owning Stocks Over Bonds Has Disappeared
-  Mon, 27 Jan 2025 01:05:00 -0500
-  https://www.wsj.com/articles/the-extra-reward-for-owning-stocks-over-bonds-has-disappeared-c3f9c223?mod=rss_markets_main
+・Asia stocks power towards weekly gain, oil below $100 on peace deal hopes
+  2026-04-17 03:48:26
+  https://www.investing.com/news/stock-market-news/stocks-set-for-weekly-gain-oil-below-100-on-peace-deal-hopes-4619687
 
-・Heard on the Street's Stock-Picking Series
-  Sun, 26 Jan 2025 22:33:00 -0500
-  https://www.wsj.com/articles/heard-on-the-streets-stock-picking-series-98f04640?mod=rss_markets_main
+・China’s Kweichow Moutai shares slip on soft FY earnings
+  2026-04-17 03:40:50
+  https://www.investing.com/news/stock-market-news/chinas-kweichow-moutai-shares-slip-on-soft-fy-earnings-4619699
+
+・OpenAI to spend more than $20 billion on Cerebras chips, receive stake, The Information reports
+  2026-04-17 03:06:49
+  https://www.investing.com/news/stock-market-news/openai-to-spend-more-than-20-billion-on-cerebras-chips-receive-equity-stake-the-information-reports-4619673
+
+・Singapore non-oil exports climb 15.3% in March on AI electronics demand
+  2026-04-17 02:56:52
+  https://www.investing.com/news/stock-market-news/singapore-nonoil-exports-climb-153-in-march-on-ai-electronics-demand-93CH-4619696
+
+・Drone maker AEVEX raises $320 million in US IPO
+  2026-04-17 02:54:31
+  https://www.investing.com/news/stock-market-news/drone-maker-aevex-raises-320-million-in-us-ipo-4619694
+
+・Asia stocks dip but head for sharp weekly gains on Iran peace hopes, tech boost
+  2026-04-17 02:45:59
+  https://www.investing.com/news/stock-market-news/asia-stocks-dip-but-head-for-sharp-weekly-gains-on-iran-peace-hopes-tech-boost-4619691
+
+・Lupin unit settles antitrust lawsuit with Humana for $30 mln
+  2026-04-17 02:11:25
+  https://www.investing.com/news/stock-market-news/lupin-unit-settles-antitrust-lawsuit-with-humana-for-30-mln-4619684
+
+・Tesla seeks Taiwan chip engineers for Terafab project
+  2026-04-17 01:54:26
+  https://www.investing.com/news/stock-market-news/tesla-seeks-taiwan-chip-engineers-for-terafab-project-4619675
+
+・OpenAI to spend over $20 bln on Cerebras chips, take equity stake- The Information
+  2026-04-17 01:47:19
+  https://www.investing.com/news/stock-market-news/openai-to-spend-over-20-bln-on-cerebras-chips-take-equity-stake-the-information-4619676
+
+
+
+■ 【海外ニュース】 Yahoo Finance US
+----------------------------------------
+・This Stock Was the Worst Performer of the Magnificent Seven in the First Quarter. Is it a Buy Today?
+  2026-04-15T16:25:00Z
+  https://finance.yahoo.com/markets/stocks/articles/stock-worst-performer-magnificent-seven-162500237.html
+
+・Sugar Prices Sink on Expectations for the Global Sugar Surplus to Persist
+  2026-04-15T16:27:22Z
+  https://finance.yahoo.com/markets/commodities/articles/sugar-prices-sink-expectations-global-162722218.html
+
+・What is a tax refund offset? 5 reasons the IRS can seize your refund.
+  2024-04-04T20:19:37Z
+  https://finance.yahoo.com/personal-finance/taxes/article/tax-refund-offset-201937068.html
+
+・This Name Keeps Data Centers Buzzing. Shares Set Up In A Base.
+  2026-04-15T16:18:27Z
+  https://www.investors.com/research/data-centers-dycom-dy-stock-fiber-optics-infrastructure/?src=A00220&yptr=yahoo
+
+・UPS Rolls Out RFID Tracking to Improve Delivery Accuracy, WSJ Reports
+  2026-04-15T16:18:57Z
+  https://finance.yahoo.com/markets/stocks/articles/ups-rolls-rfid-tracking-improve-161857107.html
+
+・Basic Materials Roundup: Market Talk
+  2026-04-15T16:26:00Z
+  https://www.wsj.com/business/basic-materials-roundup-market-talk-880e8ab4?siteid=yhoof2&yptr=yahoo
+
+・TFI subsidiary TA Dedicated acquires Triangle Warehouse
+  2026-04-15T16:18:32Z
+  https://finance.yahoo.com/markets/stocks/articles/tfi-subsidiary-ta-dedicated-acquires-161832991.html
+
+・Franklin Templeton CEO says private credit is 'here to stay'
+  2026-04-15T15:55:16Z
+  https://finance.yahoo.com/news/franklin-templeton-ceo-says-private-credit-is-here-to-stay-155516426.html
+
+・Bank of America Corporation Q1 2026 Earnings Call Summary
+  2026-04-15T16:46:56Z
+  https://finance.yahoo.com/markets/stocks/articles/bank-america-corporation-q1-2026-164656806.html
+
+・M&T Bank Corporation Q1 2026 Earnings Call Summary
+  2026-04-15T16:46:37Z
+  https://finance.yahoo.com/markets/stocks/articles/m-t-bank-corporation-q1-164637698.html
+
+・Investment Advisor Loads Up on Bond ETF, According to Latest SEC Filing
+  2026-04-15T16:29:33Z
+  https://finance.yahoo.com/markets/options/articles/investment-advisor-loads-bond-etf-162933631.html
+
+・First Horizon Corporation Q1 2026 Earnings Call Summary
+  2026-04-15T16:46:51Z
+  https://finance.yahoo.com/markets/stocks/articles/first-horizon-corporation-q1-2026-164651197.html
+
+・Wells Fargo Cuts Emerson (EMR) Price Target, Points to Familiar Macro Headwinds
+  2026-04-15T16:46:02Z
+  https://finance.yahoo.com/markets/stocks/articles/wells-fargo-cuts-emerson-emr-164602601.html
+
+・Morgan Stanley Q1 2026 Earnings Call Summary
+  2026-04-15T16:46:44Z
+  https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-q1-2026-earnings-164644989.html
+
+・What a New Generation of Traders in Commodities Might Mean For Markets
+  2026-04-15T16:46:54Z
+  https://finance.yahoo.com/markets/commodities/articles/generation-traders-commodities-might-mean-164654309.html
+
+
+
+■ 【米国オプション】 Benzinga (Options)
+----------------------------------------
+・3 Consumer Discretionary Stocks Whale Activity In Today's Session
+  Thu, 16 Apr 2026 17:35:28 +0000
+  https://www.benzinga.com/insights/options/26/04/51867314/3-consumer-discretionary-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・4 Health Care Stocks With Whale Alerts In Today's Session
+  Thu, 16 Apr 2026 17:35:23 +0000
+  https://www.benzinga.com/insights/options/26/04/51867312/4-health-care-stocks-with-whale-alerts-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・9 Information Technology Stocks Whale Activity In Today's Session
+  Thu, 16 Apr 2026 17:35:17 +0000
+  https://www.benzinga.com/insights/options/26/04/51867307/9-information-technology-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Financials Stocks With Whale Alerts In Today's Session
+  Wed, 15 Apr 2026 17:35:59 +0000
+  https://www.benzinga.com/insights/options/26/04/51839724/10-financials-stocks-with-whale-alerts-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Industrials Stocks Whale Activity In Today's Session
+  Wed, 15 Apr 2026 17:35:53 +0000
+  https://www.benzinga.com/insights/options/26/04/51839720/10-industrials-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Information Technology Stocks Whale Activity In Today's Session
+  Wed, 15 Apr 2026 17:35:48 +0000
+  https://www.benzinga.com/insights/options/26/04/51839716/10-information-technology-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Financials Stocks Whale Activity In Today's Session
+  Tue, 14 Apr 2026 17:35:27 +0000
+  https://www.benzinga.com/insights/options/26/04/51813854/10-financials-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Industrials Stocks With Whale Alerts In Today's Session
+  Tue, 14 Apr 2026 17:35:21 +0000
+  https://www.benzinga.com/insights/options/26/04/51813852/10-industrials-stocks-with-whale-alerts-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Information Technology Stocks With Whale Alerts In Today's Session
+  Tue, 14 Apr 2026 17:35:15 +0000
+  https://www.benzinga.com/insights/options/26/04/51813849/10-information-technology-stocks-with-whale-alerts-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Consumer Discretionary Stocks Whale Activity In Today's Session
+  Mon, 13 Apr 2026 17:35:28 +0000
+  https://www.benzinga.com/insights/options/26/04/51787730/10-consumer-discretionary-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Industrials Stocks Whale Activity In Today's Session
+  Mon, 13 Apr 2026 17:35:23 +0000
+  https://www.benzinga.com/insights/options/26/04/51787726/10-industrials-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Information Technology Stocks Whale Activity In Today's Session
+  Mon, 13 Apr 2026 17:35:17 +0000
+  https://www.benzinga.com/insights/options/26/04/51787722/10-information-technology-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・9 Communication Services Stocks Whale Activity In Today's Session
+  Fri, 10 Apr 2026 17:35:27 +0000
+  https://www.benzinga.com/insights/options/26/04/51760646/9-communication-services-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Industrials Stocks With Whale Alerts In Today's Session
+  Fri, 10 Apr 2026 17:35:22 +0000
+  https://www.benzinga.com/insights/options/26/04/51760642/10-industrials-stocks-with-whale-alerts-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
+
+・10 Information Technology Stocks Whale Activity In Today's Session
+  Fri, 10 Apr 2026 17:35:16 +0000
+  https://www.benzinga.com/insights/options/26/04/51760641/10-information-technology-stocks-whale-activity-in-todays-session?utm_source=benzinga_taxonomy&utm_medium=rss_feed_free&utm_content=taxonomy_rss&utm_campaign=channel
 
 
