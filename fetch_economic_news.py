@@ -12,16 +12,28 @@ DOC_TITLE = "最新経済ニュース（自動更新用）"
 
 FEEDS = [
     {
-        "category": "【国内ニュース】 (Japanese) - Yahoo!ニュース（経済）",
+        "category": "【国内ニュース】 Yahoo!ニュース（経済）",
         "url": "https://news.yahoo.co.jp/rss/categories/business.xml"
     },
     {
-        "category": "【海外ニュース】 (English) - Financial Times (Markets)",
-        "url": "https://www.ft.com/markets?format=rss"
+        "category": "【国内ニュース】 NHKニュース（ビジネス）",
+        "url": "https://www.nhk.or.jp/rss/news/cat5.xml"
     },
     {
-        "category": "【海外ニュース】 (English) - Wall Street Journal (Markets)",
-        "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
+        "category": "【海外ニュース】 CNBC (Finance)",
+        "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?profile=10000664"
+    },
+    {
+        "category": "【海外ニュース】 Investing.com (Markets)",
+        "url": "https://www.investing.com/rss/news_25.rss"
+    },
+    {
+        "category": "【海外ニュース】 Yahoo Finance US",
+        "url": "https://finance.yahoo.com/news/rssindex"
+    },
+    {
+        "category": "【米国オプション】 Benzinga (Options)",
+        "url": "https://www.benzinga.com/markets/options/feed/"
     }
 ]
 
