@@ -1,72 +1,143 @@
 === 最新経済ニュース ===
-取得日時: 2026-04-17 13:24:24
+取得日時: 2026-04-17 19:45:50
+
+■ CNN Fear & Greed Index
+----------------------------------------
+・現在: 63.31 (greed)
+・前日終値: 62.20
+・1週間前: 36.57
+・1ヶ月前: 20.69
+・1年前: 16.06
+
+
+■ 主要市場データ (商品・為替・株価インデックス)
+----------------------------------------
+・日経平均: 58,475.90 円 (前日比: -1,042.44 / -1.75%)
+・S&P 500: 7,041.28 USD (前日比: +18.33 / +0.26%)
+・米ドル/円: 159.13 円 (前日比: +0.01 / +0.01%)
+・ユーロ/ドル: 1.18 USD (前日比: +0.00 / +0.11%)
+・WTI原油: 87.81 USD (前日比: -3.36 / -3.69%)
+・金 (Gold): 4,810.40 USD (前日比: +2.10 / +0.04%)
+
 
 ■ 【国内ニュース】 Yahoo!ニュース（経済）
 ----------------------------------------
-・ドバイ、観光トップが「現地の今」を伝えるメッセージ配信、日常生活は通常通り、正確な情報の共有を(トラベルボイス)
-  Fri, 17 Apr 2026 04:20:09 GMT
-  https://news.yahoo.co.jp/articles/1e0d045e9027aad7eef8e2fc512e0ebf53151c99?source=rss
+・“マーヴェリック”が再び空へ！ 映画『トップガン』3作目の制作がラスベガスで正式発表！ トム・クルーズ続投(乗りものニュース)
+  Fri, 17 Apr 2026 10:42:00 GMT
+  https://news.yahoo.co.jp/articles/3d0b16c508b1f332908c73a4f5c2ecb50f909a00?source=rss
 
-・マクドナルド「株主優待券5000円分」が“3000円”で売られてるのを発見！ でも“転売品は規約違反”なら「買うだけ損」ですか？ 優待内容や必要投資額も確認(ファイナンシャルフィールド)
-  Fri, 17 Apr 2026 04:20:02 GMT
-  https://news.yahoo.co.jp/articles/80aa2511caf5b074386eb1df45333f8954799814?source=rss
+・スタイリスト小林新が通う、目黒通りのインテリアストア「ポケットパーク」(GQ JAPAN)
+  Fri, 17 Apr 2026 10:40:10 GMT
+  https://news.yahoo.co.jp/articles/b19f93fb565dc54615226d7f0f9c6f3ae3d605f4?source=rss
 
-・ブラザー、インバウンド向け体験型施設を開業、ミシン使った和風小物作りやサムライ体験など(トラベルボイス)
-  Fri, 17 Apr 2026 04:10:23 GMT
-  https://news.yahoo.co.jp/articles/2c17e1911e9dc80b36bb155dd41b01bec5ce747a?source=rss
+・一度辞めた会社に「出戻り転職」する人もいるそうです。年収や働きやすさは、最初にいた頃とどれくらい変わるのでしょうか？(ファイナンシャルフィールド)
+  Fri, 17 Apr 2026 10:30:09 GMT
+  https://news.yahoo.co.jp/articles/c7294c3c1cea8d5364aca663316b5d481f4dca8b?source=rss
 
-・ホンダ「フリード」改良モデルまもなく登場か!? 「エアーの5人乗り」＆精悍な「ブラックスタイル」新設定に「これぞ本命！」と期待の声！ 進化した「コンパクトミニバン」への反響は？(くるまのニュース)
-  Fri, 17 Apr 2026 04:10:00 GMT
-  https://news.yahoo.co.jp/articles/fce3dd3b1e1a56901336b6c17c65712b91a4ec5a?source=rss
+・亀梨和也が資生堂「ザ・ギンザ」の特別ムービーに登場　“ハイブリッドジェルオイルn”の特設サイト公開に合わせ(WWDJAPAN.com)
+  Fri, 17 Apr 2026 10:30:00 GMT
+  https://news.yahoo.co.jp/articles/138cdaf586d864b147b0eef050284eeee364fadf?source=rss
 
-・トヨタ、クラウン「特等席に浸ろう」キャンペーンを開始。クラウン全4モデルが対象【全国のトヨタ販売店で“全席特等席”を体感する新企画】(月刊自家用車WEB)
-  Fri, 17 Apr 2026 04:10:00 GMT
-  https://news.yahoo.co.jp/articles/9929f9ca4a2eb173d07416df135be6facbb3cceb?source=rss
+・自賠責保険6％引き上げへ　金融庁、13年ぶり(共同通信)
+  Fri, 17 Apr 2026 10:28:29 GMT
+  https://news.yahoo.co.jp/articles/5b34b01aaf96383cd920365c8fe6c194d35a7565?source=rss
 
-・不要の「推し活グッズ」「家電ケーブル」回収・資源循環　三井不動産(Impress Watch)
-  Fri, 17 Apr 2026 04:06:51 GMT
-  https://news.yahoo.co.jp/articles/2172e0e5ab195707159efaadb37f613d735e3980?source=rss
+・コメ平均価格3800円台に　「茨城産コシヒカリ」がお得なワケ(テレビ朝日系（ANN）)
+  Fri, 17 Apr 2026 10:27:16 GMT
+  https://news.yahoo.co.jp/articles/6121f362c72252eaa680a650e20a73bd2143458d?source=rss
 
-・ガーナチョコを使ったスイーツ3品登場!今年の新作は「チョコレートスフレ」【銀座コージーコーナー】(食品産業新聞社ニュースWEB)
-  Fri, 17 Apr 2026 04:05:51 GMT
-  https://news.yahoo.co.jp/articles/a6ea48d60e6e7b4ca72563588e88ac9bdb8ac30f?source=rss
+・中東情勢の影響、富山県内企業の5割が「すでに影響出ている」　県がアンケート調査へ(FNNプライムオンライン)
+  Fri, 17 Apr 2026 10:25:42 GMT
+  https://news.yahoo.co.jp/articles/a53658ab97312314a89ce6ede08c222dc4f93d3a?source=rss
 
-・吉田カバン「ポーター」が人気シリーズ“タンカー”のポップアップ　全120アイテムが集結(WWDJAPAN.com)
-  Fri, 17 Apr 2026 04:05:00 GMT
-  https://news.yahoo.co.jp/articles/53c895f329f30eb865cc33e20d4bb5361feae52f?source=rss
+・ロシア関連の制裁対象暗号資産取引所グリネックス、サイバー攻撃で約20.9億円流出し業務停止(あたらしい経済)
+  Fri, 17 Apr 2026 10:16:06 GMT
+  https://news.yahoo.co.jp/articles/7a9a037b1b9c3267f0536b64c5bd164a885b16da?source=rss
 
-・英国で旅行控えの傾向、2026年3月の旅行支出は3.3％減、中東情勢による燃料高騰で(トラベルボイス)
-  Fri, 17 Apr 2026 04:01:25 GMT
-  https://news.yahoo.co.jp/articles/a495900723fec4e58214762a5106278a2468c10e?source=rss
+・APS-C魚眼レンズ「TTArtisan 7.5mm f/2」にシルバーが追加(デジカメ Watch)
+  Fri, 17 Apr 2026 10:16:00 GMT
+  https://news.yahoo.co.jp/articles/31e9c161ceff42633ab76363422648b3329c83a8?source=rss
 
-・ランニング時にスマートウォッチの性能を引き出す5つのハック(ライフハッカー・ジャパン)
-  Fri, 17 Apr 2026 04:01:01 GMT
-  https://news.yahoo.co.jp/articles/15fe7ba8b5ec0914e20df3df6d56745397148410?source=rss
+・「あれ、どこ停めたっけ？」を即解決！　カーメイトの“挿すだけ”位置確認チャージャーが凄い！(ベストカーWeb)
+  Fri, 17 Apr 2026 10:16:00 GMT
+  https://news.yahoo.co.jp/articles/bbde3ece44f69ed2b3e547b24c94b03e702b031f?source=rss
 
-・センスがなくても打ち手の案が「量産」できる4つの思考法。天才的なひらめきに頼らずに良いたたき台を作る人の頭の中(東洋経済オンライン)
-  Fri, 17 Apr 2026 04:00:38 GMT
-  https://news.yahoo.co.jp/articles/6eb908bb7a62a18c593b286ca9f50d4aa0446aa7?source=rss
+・米軍地上部隊の“守護者”A-10、ついに「最後のパイロット訓練生」が卒業！ 残る運用期間はどのくらい？(乗りものニュース)
+  Fri, 17 Apr 2026 10:12:00 GMT
+  https://news.yahoo.co.jp/articles/56a586a0f50b631331abec2f5df5d8c370d9a786?source=rss
 
-・ヒューマノイドの「脳」供給で顧客400社　中国「D-Robotics」、設立2年で累計590億調達(36Kr Japan)
-  Fri, 17 Apr 2026 04:00:10 GMT
-  https://news.yahoo.co.jp/articles/678160b3ebc52f6ebbea59960e47437721061b60?source=rss
+・国家はどこまで介入すべきか？青切符制度を問う(みんかぶマガジン)
+  Fri, 17 Apr 2026 10:10:32 GMT
+  https://news.yahoo.co.jp/articles/77aa998140c765c49b4a004344662c3ecbc0194b?source=rss
 
-・メルセデスベンツ『Cクラス』新型、インテリアを先行公開…4月20日ワールドプレミアへ(レスポンス)
-  Fri, 17 Apr 2026 04:00:04 GMT
-  https://news.yahoo.co.jp/articles/ae89170e3df06d94a5d027bc2461ee259a401f08?source=rss
+・被害にすら気づけない──日本企業を襲う“見えない脅威”の正体(みんかぶマガジン)
+  Fri, 17 Apr 2026 10:10:28 GMT
+  https://news.yahoo.co.jp/articles/6d7c5ea11e3e7e476349ebb57a88ff95ad24bdcf?source=rss
 
-・「異端クラウン、爆誕」ベンコラ6人乗りのレアなUZS131を極低車高化した男の物語(MotorFan)
-  Fri, 17 Apr 2026 04:00:00 GMT
-  https://news.yahoo.co.jp/articles/3254e6bde1c73c0b0bbfedfb82bdd69bb47087d8?source=rss
+・志望動機で落ちる人は何が違うのか？“ふわっとした言葉”の落とし穴(みんかぶマガジン)
+  Fri, 17 Apr 2026 10:10:24 GMT
+  https://news.yahoo.co.jp/articles/1ce733b710b8ba6eb4dab27acd63c7d07fb4ac97?source=rss
 
-・株価が1年で2700%上昇、AIブームの波に乗るデータストレージ企業サンディスク(Forbes JAPAN)
-  Fri, 17 Apr 2026 04:00:00 GMT
-  https://news.yahoo.co.jp/articles/8dcd80ac7ea33d117f709f409ca365335d020369?source=rss
+・不動産価格はどう決まるのか？15%の差を生む2つの評価基準(みんかぶマガジン)
+  Fri, 17 Apr 2026 10:10:20 GMT
+  https://news.yahoo.co.jp/articles/3ea65d05c695bebb80f21c5ce74ced94dbef765b?source=rss
 
 
 
 ■ 【国内ニュース】 NHKニュース（ビジネス）
 ----------------------------------------
+・軽油カルテル 東京地検特捜部が5社を独禁法違反の罪で起訴
+  Fri, 17 Apr 2026 19:42:01 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101721000
+
+・円相場 対ユーロで最安値更新 一時1ユーロ＝188円に迫る水準に
+  Fri, 17 Apr 2026 18:52:02 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101911000
+
+・東証 不正会計のニデックに違約金9000万円超求める方針
+  Fri, 17 Apr 2026 18:38:21 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101881000
+
+・滋賀銀行と池田泉州HD 資本業務提携を正式発表
+  Fri, 17 Apr 2026 17:52:51 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101831000
+
+・化学繊維協会「原材料は十分確保」も値上げへ理解求める
+  Fri, 17 Apr 2026 17:21:32 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101691000
+
+・スーパーのコメ平均価格 5キロ3873円 9週続けて値下がり
+  Fri, 17 Apr 2026 17:13:35 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101711000
+
+・先端半導体の新研究施設 北海道で2028年度の稼働目指す
+  Fri, 17 Apr 2026 16:59:13 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101681000
+
+・ホンダ 中国の一部自動車工場を6月から休止へ 競争激化で
+  Fri, 17 Apr 2026 16:40:12 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101671000
+
+・株価 1000円超値下がり 利益確定の動き広がる
+  Fri, 17 Apr 2026 16:16:36 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101521000
+
+・米ネットフリックス 1～3月増益 “日本 WBC独占配信で会員増”
+  Fri, 17 Apr 2026 15:24:45 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101631000
+
+・きょうのおはBiz 4月17日(金) 原油高 長期化なら“価格転嫁”?
+  Fri, 17 Apr 2026 14:24:00 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101411000
+
+・最先端画像センサー量産計画に最大600億円補助 経産省
+  Fri, 17 Apr 2026 13:49:30 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101601000
+
+・G20財務相・中銀総裁会議 イラン情勢の経済影響に懸念相次ぐ
+  Fri, 17 Apr 2026 13:43:40 +0900
+  https://news.web.nhk/newsweb/na/na-k10015101221000
+
 ・JR北海道の“黄線区”上下分離案 金子国交相「十分議論を」
   Fri, 17 Apr 2026 13:07:50 +0900
   https://news.web.nhk/newsweb/na/na-k10015101481000
@@ -75,65 +146,29 @@
   Fri, 17 Apr 2026 12:31:16 +0900
   https://news.web.nhk/newsweb/na/na-k10015101471000
 
-・軽油カルテルで公取委が5社を独禁法違反疑いで刑事告発
-  Fri, 17 Apr 2026 12:28:42 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101511000
-
-・株価 値下がり 半導体関連などの銘柄が売られる
-  Fri, 17 Apr 2026 12:13:42 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101521000
-
-・アジアが米国産原油に注目“超大型タンカー予約難しく”米報道
-  Fri, 17 Apr 2026 12:00:37 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101431000
-
-・赤澤経産相 “塗料用シンナーや一部住宅設備の供給にめど”
-  Fri, 17 Apr 2026 11:56:30 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101441000
-
-・日銀 植田総裁 “負の供給ショック”踏まえ金融政策を判断
-  Fri, 17 Apr 2026 11:40:51 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101421000
-
-・ルフトハンザ航空子会社27機運航停止へ 燃料費高騰など受け
-  Fri, 17 Apr 2026 06:48:02 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101321000
-
-・ナスダック指数最高値更新 12営業日連続上昇は2009年以来
-  Fri, 17 Apr 2026 06:45:33 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101331000
-
-・G20財務相中銀総裁会議が終了 議長国アメリカのもとで議論
-  Fri, 17 Apr 2026 05:14:04 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101221000
-
-・滋賀銀行と池田泉州HD 資本業務提携で最終調整
-  Thu, 16 Apr 2026 21:07:34 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101121000
-
-・サンリオ 常務が不適切な報酬受領の疑いで調査始める
-  Thu, 16 Apr 2026 20:19:16 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101061000
-
-・イラン情勢影響広がる 資材の費用上昇 資材そのもの入手困難に
-  Thu, 16 Apr 2026 19:40:37 +0900
-  https://news.web.nhk/newsweb/na/na-k10015100871000
-
-・株価 終値の最高値更新 米イランの協議進展に期待
-  Thu, 16 Apr 2026 19:03:57 +0900
-  https://news.web.nhk/newsweb/na/na-k10015100561000
-
-・円相場 対ドルで小幅な値動き 米イラン協議の行方見極め
-  Thu, 16 Apr 2026 18:15:43 +0900
-  https://news.web.nhk/newsweb/na/na-k10015101011000
-
 
 
 ■ 【海外ニュース】 MarketWatch (Top Stories)
 ----------------------------------------
+・Oil prices dropping after Trump says Iran war should end ‘pretty soon’
+  Fri, 17 Apr 2026 10:06:00 GMT
+  https://www.marketwatch.com/story/oil-prices-dropping-after-trump-says-iran-war-should-end-pretty-soon-da53676a?mod=mw_rss_topstories
+
+・‘I am the trustee’: My mother set up a trust for my sibling who stole $100,000 from a bank. Can the trust be seized?
+  Fri, 17 Apr 2026 10:01:00 GMT
+  https://www.marketwatch.com/story/felony-charges-are-pending-my-mother-set-up-a-trust-for-my-sibling-who-stole-100-000-from-a-bank-can-the-trust-be-seized-ae69dbaf?mod=mw_rss_topstories
+
 ・Former Treasury Secretary Henry Paulson warns U.S. needs an emergency ‘break-the-glass’ plan if Treasury demand collapses
-  Fri, 17 Apr 2026 04:11:00 GMT
+  Fri, 17 Apr 2026 09:39:00 GMT
   https://www.marketwatch.com/story/former-treasury-secretary-henry-paulson-warns-u-s-needs-an-emergency-break-the-glass-plan-if-treasury-demand-collapses-051e2a2c?mod=mw_rss_topstories
+
+・‘I hope to retire at 59’: I have $950,000 in my 401(k)s. When do I do a Roth conversion?
+  Fri, 17 Apr 2026 09:15:00 GMT
+  https://www.marketwatch.com/story/i-hope-to-retire-at-59-i-have-950-000-in-my-401-k-s-when-do-i-do-a-roth-conversion-07bf2c58?mod=mw_rss_topstories
+
+・9 months after Ozzy’s death, Sharon Osbourne lists L.A. mansion for $17 million
+  Fri, 17 Apr 2026 08:58:00 GMT
+  https://www.marketwatch.com/story/9-months-after-ozzys-death-sharon-osbourne-lists-l-a-mansion-for-17-million-c4a3fd5d?mod=mw_rss_topstories
 
 ・Jury finds that Live Nation is an illegal monopoly, but a breakup with Ticketmaster is unlikely, analysts say
   Fri, 17 Apr 2026 04:06:00 GMT
@@ -155,129 +190,113 @@
   Thu, 16 Apr 2026 23:55:00 GMT
   https://www.marketwatch.com/story/with-the-largest-industrial-ipo-since-1999-this-air-quality-giant-is-going-public-08a50184?mod=mw_rss_topstories
 
-・Pepsi says price cuts and wellness push are bringing back customers — and the stock surges
-  Thu, 16 Apr 2026 23:33:00 GMT
-  https://www.marketwatch.com/story/pepsi-says-price-cuts-and-wellness-push-are-bringing-back-customers-and-the-stock-surges-e6e5ea05?mod=mw_rss_topstories
-
-・AMD has ‘indispensable assets’ — powering the stock toward its best run in two decades
-  Thu, 16 Apr 2026 22:58:00 GMT
-  https://www.marketwatch.com/story/amd-has-indispensable-assets-powering-the-stock-toward-its-best-run-in-two-decades-aa44c469?mod=mw_rss_topstories
-
-・Microsoft’s stock sees its best four-day stretch in six years — with an extreme bounce
-  Thu, 16 Apr 2026 22:45:00 GMT
-  https://www.marketwatch.com/story/microsofts-stock-sees-its-best-four-day-stretch-in-six-years-with-an-extreme-bounce-3eb834d6?mod=mw_rss_topstories
-
-・‘Felony charges are pending’: My mother set up a trust for my sibling who stole $100,000 from a bank. Can the trust be seized?
-  Thu, 16 Apr 2026 22:30:00 GMT
-  https://www.marketwatch.com/story/felony-charges-are-pending-my-mother-set-up-a-trust-for-my-sibling-who-stole-100-000-from-a-bank-can-the-trust-be-seized-ae69dbaf?mod=mw_rss_topstories
-
 
 
 ■ 【海外ニュース】 Investing.com (Markets)
 ----------------------------------------
-・Circle faces lawsuit over failure to freeze funds in Drift Protocol hack
-  2026-04-17 04:15:14
-  https://www.investing.com/news/stock-market-news/circle-faces-lawsuit-over-failure-to-freeze-funds-in-drift-protocol-hack-4619705
+・S&P 500 swings to overbought in near-record 11 days
+  2026-04-17 10:30:35
+  https://www.investing.com/news/stock-market-news/sp-500-swings-to-overbought-in-nearrecord-11-days-93CH-4619946
 
-・Asia stocks power towards weekly gain, oil below $100 on peace deal hopes
-  2026-04-17 03:48:26
-  https://www.investing.com/news/stock-market-news/stocks-set-for-weekly-gain-oil-below-100-on-peace-deal-hopes-4619687
+・India stocks higher at close of trade; Nifty 50 up 0.65%
+  2026-04-17 10:30:05
+  https://www.investing.com/news/stock-market-news/india-stocks-higher-at-close-of-trade-nifty-50-up-065-4619945
 
-・China’s Kweichow Moutai shares slip on soft FY earnings
-  2026-04-17 03:40:50
-  https://www.investing.com/news/stock-market-news/chinas-kweichow-moutai-shares-slip-on-soft-fy-earnings-4619699
+・Goldman raises China robotaxi fleet forecast and says buy these 2 stocks
+  2026-04-17 10:25:22
+  https://www.investing.com/news/stock-market-news/goldman-raises-china-robotaxi-fleet-forecast-and-says-buy-these-2-stocks-4619942
 
-・OpenAI to spend more than $20 billion on Cerebras chips, receive stake, The Information reports
-  2026-04-17 03:06:49
-  https://www.investing.com/news/stock-market-news/openai-to-spend-more-than-20-billion-on-cerebras-chips-receive-equity-stake-the-information-reports-4619673
+・Uber buys additional 4.5% stake in Delivery Hero from Prosus for $318 million
+  2026-04-17 10:23:17
+  https://www.investing.com/news/stock-market-news/uber-buys-additional-45-stake-in-delivery-hero-from-prosus-for-318-million-93CH-4619941
 
-・Singapore non-oil exports climb 15.3% in March on AI electronics demand
-  2026-04-17 02:56:52
-  https://www.investing.com/news/stock-market-news/singapore-nonoil-exports-climb-153-in-march-on-ai-electronics-demand-93CH-4619696
+・Fuel surge threatens Spirit Airlines bankruptcy exit, raises liquidation risk
+  2026-04-17 10:19:33
+  https://www.investing.com/news/stock-market-news/analysisfuel-surge-threatens-spirit-airlines-bankruptcy-exit-raises-liquidation-risk-4619308
 
-・Drone maker AEVEX raises $320 million in US IPO
-  2026-04-17 02:54:31
-  https://www.investing.com/news/stock-market-news/drone-maker-aevex-raises-320-million-in-us-ipo-4619694
+・Walmart’s Flipkart plans foray into India’s ticketing market as live events boom, sources say
+  2026-04-17 10:19:17
+  https://www.investing.com/news/stock-market-news/walmarts-flipkart-plans-foray-into-indias-ticketing-market-as-live-events-boom-sources-say-4619930
 
-・Asia stocks dip but head for sharp weekly gains on Iran peace hopes, tech boost
-  2026-04-17 02:45:59
-  https://www.investing.com/news/stock-market-news/asia-stocks-dip-but-head-for-sharp-weekly-gains-on-iran-peace-hopes-tech-boost-4619691
+・SNP shares rise as Q1 revenue climbs 19% to €79 million
+  2026-04-17 10:17:36
+  https://www.investing.com/news/stock-market-news/snp-shares-rise-as-q1-revenue-climbs-19-to-79-million-93CH-4619925
 
-・Lupin unit settles antitrust lawsuit with Humana for $30 mln
-  2026-04-17 02:11:25
-  https://www.investing.com/news/stock-market-news/lupin-unit-settles-antitrust-lawsuit-with-humana-for-30-mln-4619684
+・Deutsche Bank starts Skanska at “buy’ on margin outlook, earnings growth
+  2026-04-17 10:09:35
+  https://www.investing.com/news/stock-market-news/deutsche-bank-starts-skanska-at-buy-on-margin-outlook-earnings-growth-4619883
 
-・Tesla seeks Taiwan chip engineers for Terafab project
-  2026-04-17 01:54:26
-  https://www.investing.com/news/stock-market-news/tesla-seeks-taiwan-chip-engineers-for-terafab-project-4619675
+・VIDA Global files for 3.33M share IPO at $4.50-$5/sh
+  2026-04-17 10:09:03
+  https://www.investing.com/news/stock-market-news/vida-global-files-for-333m-share-ipo-at-4505sh-432SI-4619882
 
-・OpenAI to spend over $20 bln on Cerebras chips, take equity stake- The Information
-  2026-04-17 01:47:19
-  https://www.investing.com/news/stock-market-news/openai-to-spend-over-20-bln-on-cerebras-chips-take-equity-stake-the-information-4619676
+・It’s not just Allbirds - another meme-stock season is on the horizon, Vanda Research says
+  2026-04-17 10:07:38
+  https://www.investing.com/news/stock-market-news/its-not-just-allbirds--another-memestock-season-is-on-the-horizon-vanda-research-says-4619881
 
 
 
 ■ 【海外ニュース】 Yahoo Finance US
 ----------------------------------------
-・This Stock Was the Worst Performer of the Magnificent Seven in the First Quarter. Is it a Buy Today?
-  2026-04-15T16:25:00Z
-  https://finance.yahoo.com/markets/stocks/articles/stock-worst-performer-magnificent-seven-162500237.html
+・127-year-old retailer confirms more cuts in 2026
+  2026-04-16T23:17:00Z
+  https://finance.yahoo.com/markets/stocks/articles/127-old-retailer-confirms-more-231700401.html
 
-・Sugar Prices Sink on Expectations for the Global Sugar Surplus to Persist
-  2026-04-15T16:27:22Z
-  https://finance.yahoo.com/markets/commodities/articles/sugar-prices-sink-expectations-global-162722218.html
+・When will mortgage rates go down to 5%?
+  2025-06-04T20:18:06Z
+  https://finance.yahoo.com/personal-finance/mortgages/article/when-will-mortgage-rates-go-down-to-5-201806162.html
+
+・Capital One launches new Venture Business card with limited-time 150,000-mile welcome bonus
+  2026-04-15T19:30:20Z
+  https://finance.yahoo.com/personal-finance/credit-cards/review/capital-one-venture-business-card-193020902.html
+
+・IRS staffing is down by 27% this year. What that means for your tax refund.
+  2026-03-13T13:00:52Z
+  https://finance.yahoo.com/personal-finance/taxes/article/irs-staffing-is-down-by-27-this-year-what-that-means-for-your-tax-refund-130052892.html
+
+・How do banks make money?
+  2024-05-16T19:25:17Z
+  https://finance.yahoo.com/personal-finance/banking/article/how-do-banks-make-money-192517968.html
+
+・53 million filers claimed Trump's new tax cuts. 4 key changes that boosted refunds.
+  2026-03-02T13:00:13Z
+  https://finance.yahoo.com/personal-finance/taxes/article/53-million-filers-claimed-trumps-new-tax-cuts-4-key-changes-that-boosted-refunds-130013823.html
+
+・J.B. Hunt (JBHT) Q1 2026 Earnings Call Transcript
+  2026-04-15T22:41:28Z
+  https://finance.yahoo.com/markets/stocks/articles/j-b-hunt-jbht-q1-224128271.html
+
+・Oil’s 50% Surge Sparks Supercycle Talk but Risks Linger
+  2026-04-15T23:00:00Z
+  https://finance.yahoo.com/sectors/energy/articles/oil-50-surge-sparks-supercycle-230000067.html
+
+・More Japanese firms say no to rate hikes as Iran war clouds outlook: Reuters poll
+  2026-04-15T23:02:15Z
+  https://finance.yahoo.com/economy/policy/articles/more-japanese-firms-no-rate-230215716.html
+
+・This Dividend Stock Is Becoming Too Cheap to Ignore: Should You Buy?
+  2026-04-15T23:30:02Z
+  https://finance.yahoo.com/markets/stocks/articles/dividend-stock-becoming-too-cheap-233002411.html
 
 ・What is a tax refund offset? 5 reasons the IRS can seize your refund.
   2024-04-04T20:19:37Z
   https://finance.yahoo.com/personal-finance/taxes/article/tax-refund-offset-201937068.html
 
-・This Name Keeps Data Centers Buzzing. Shares Set Up In A Base.
-  2026-04-15T16:18:27Z
-  https://www.investors.com/research/data-centers-dycom-dy-stock-fiber-optics-infrastructure/?src=A00220&yptr=yahoo
+・Why Morgan Stanley Stock Rocked the Market Today
+  2026-04-15T22:43:18Z
+  https://finance.yahoo.com/markets/stocks/articles/why-morgan-stanley-stock-rocked-224318346.html
 
-・UPS Rolls Out RFID Tracking to Improve Delivery Accuracy, WSJ Reports
-  2026-04-15T16:18:57Z
-  https://finance.yahoo.com/markets/stocks/articles/ups-rolls-rfid-tracking-improve-161857107.html
+・IMF Warns Of Potential Global Recession Amid High Oil Prices
+  2026-04-16T00:00:00Z
+  https://finance.yahoo.com/economy/articles/imf-warns-potential-global-recession-000000844.html
 
-・Basic Materials Roundup: Market Talk
-  2026-04-15T16:26:00Z
-  https://www.wsj.com/business/basic-materials-roundup-market-talk-880e8ab4?siteid=yhoof2&yptr=yahoo
+・TSMC lifts revenue forecast, pledges more capital spending to meet AI chip demand
+  2026-04-16T00:05:51Z
+  https://finance.yahoo.com/markets/stocks/articles/tsmc-set-post-50-quarterly-000551299.html
 
-・TFI subsidiary TA Dedicated acquires Triangle Warehouse
-  2026-04-15T16:18:32Z
-  https://finance.yahoo.com/markets/stocks/articles/tfi-subsidiary-ta-dedicated-acquires-161832991.html
-
-・Franklin Templeton CEO says private credit is 'here to stay'
-  2026-04-15T15:55:16Z
-  https://finance.yahoo.com/news/franklin-templeton-ceo-says-private-credit-is-here-to-stay-155516426.html
-
-・Bank of America Corporation Q1 2026 Earnings Call Summary
-  2026-04-15T16:46:56Z
-  https://finance.yahoo.com/markets/stocks/articles/bank-america-corporation-q1-2026-164656806.html
-
-・M&T Bank Corporation Q1 2026 Earnings Call Summary
-  2026-04-15T16:46:37Z
-  https://finance.yahoo.com/markets/stocks/articles/m-t-bank-corporation-q1-164637698.html
-
-・Investment Advisor Loads Up on Bond ETF, According to Latest SEC Filing
-  2026-04-15T16:29:33Z
-  https://finance.yahoo.com/markets/options/articles/investment-advisor-loads-bond-etf-162933631.html
-
-・First Horizon Corporation Q1 2026 Earnings Call Summary
-  2026-04-15T16:46:51Z
-  https://finance.yahoo.com/markets/stocks/articles/first-horizon-corporation-q1-2026-164651197.html
-
-・Wells Fargo Cuts Emerson (EMR) Price Target, Points to Familiar Macro Headwinds
-  2026-04-15T16:46:02Z
-  https://finance.yahoo.com/markets/stocks/articles/wells-fargo-cuts-emerson-emr-164602601.html
-
-・Morgan Stanley Q1 2026 Earnings Call Summary
-  2026-04-15T16:46:44Z
-  https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-q1-2026-earnings-164644989.html
-
-・What a New Generation of Traders in Commodities Might Mean For Markets
-  2026-04-15T16:46:54Z
-  https://finance.yahoo.com/markets/commodities/articles/generation-traders-commodities-might-mean-164654309.html
+・J.B. Hunt Transport Services, Inc. Q1 2026 Earnings Call Summary
+  2026-04-16T00:19:27Z
+  https://finance.yahoo.com/markets/stocks/articles/j-b-hunt-transport-services-001927279.html
 
 
 
