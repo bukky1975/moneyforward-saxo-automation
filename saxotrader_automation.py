@@ -230,7 +230,7 @@ def update_google_sheets(positions):
             # A列からE列まで基本データを書き込み
             ws.update(range_name=f"A{row_index}:E{row_index}", values=[row_data_base])
             # F列からJ列にかけてグリークス(IV, Delta, Gamma, Vega, Theta)を書き込み
-            ws.update(range_name=f"F{row_index}:J{row_index}", values=[row_data_greeks])
+            ws.update(range_name=f"I{row_index}:M{row_index}", values=[row_data_greeks])
             
             print(f"- シート '{ws.title}' に本日のデータを記録しました！ (行: {row_index})", flush=True)
         else:
