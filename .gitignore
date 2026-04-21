@@ -10,3 +10,5 @@ google_credentials.json
 mf_dom.html
 test_*.py
 .playwright_data/
+fgi.json
+latest_economic_news.txt
