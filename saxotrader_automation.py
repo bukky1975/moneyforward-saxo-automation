@@ -213,7 +213,7 @@ def update_google_sheets(positions):
             
             # A:日付, B:数量, C:購入価格, D:現在値, E:評価損益
             row_data_base = [today_str, amount, purchase_price, current_price, pl]
-            # I:IV, J:Delta, K:Gamma, L:Vega, M:Theta
+            # F:IV, G:Delta, H:Gamma, I:Vega, J:Theta
             row_data_greeks = [iv, delta, gamma, vega, theta]
             
             # 列Aの最初の空行を探す (先頭からスキャンして、空行または今日の日付の行を特定)
@@ -230,7 +230,7 @@ def update_google_sheets(positions):
             # A列からE列まで基本データを書き込み
             ws.update(range_name=f"A{row_index}:E{row_index}", values=[row_data_base])
             # F列からJ列にかけてグリークス(IV, Delta, Gamma, Vega, Theta)を書き込み
-            ws.update(range_name=f"I{row_index}:M{row_index}", values=[row_data_greeks])
+            ws.update(range_name=f"F{row_index}:J{row_index}", values=[row_data_greeks])
             
             print(f"- シート '{ws.title}' に本日のデータを記録しました！ (行: {row_index})", flush=True)
         else:
